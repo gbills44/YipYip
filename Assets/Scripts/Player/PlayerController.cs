@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,13 +10,16 @@ public class PlayerController : MonoBehaviour
     private float movementSpeed = 5.0f;
     private Rigidbody2D pcRigidBody;
     private Vector2 moveInput;
+    private float jumpBtnInput;
 
+    private float yipBtnInput;
     private float verticalVelocity;
     private float horizontalVelocity;
     public float baseVelocity = 5.0f;
     public float baseVerticalMult = 0.4f;
     public float baseExponential = 1.05f;
     public float baseHorizontalMult = 0.4f;
+    public float fakeTimer = 1.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -72,11 +76,25 @@ public class PlayerController : MonoBehaviour
         moveInput = context.ReadValue<Vector2>();
     }
 
+    public void Jump(InputAction.CallbackContext context)
+    {
+        jumpBtnInput = context.ReadValue<float>();
+        Debug.Log("Jump - Needs to do something");
+    }
+
+    public void YipBoost(InputAction.CallbackContext context)
+    {
+        yipBtnInput = context.ReadValue<float>();
+        Debug.Log("YipBoost");
+        fakeTimer += 5.0f;
+
+    }
+
     private void CalcVerticalVelocity()
     {
         // design formula starting point 
         // velocity = baseVelocity + baseVerticalMult X t^(baseExponential)
-        verticalVelocity = baseVelocity + baseVerticalMult * Mathf.Pow(1.0f, baseExponential);
+        verticalVelocity = baseVelocity + baseVerticalMult * Mathf.Pow(fakeTimer, baseExponential);
         verticalVelocity = 1.0f;
     }
 
