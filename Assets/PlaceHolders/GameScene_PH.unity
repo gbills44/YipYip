@@ -637,7 +637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.OnScreen.OnScreenStick
   m_MovementRange: 50
   m_DynamicOriginRange: 100
-  m_ControlPath: <Gamepad>/leftStick
+  m_ControlPath: <Joystick>/stick
   m_Behaviour: 0
   m_UseIsolatedInputActions: 0
   m_PointerDownAction:
@@ -935,6 +935,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5639b1e8e7b7b8643a224705aa8dd9aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  verticalVelocity: 0
+  horizontalVelocity: 0
+  baseVelocity: 5
+  baseVerticalMult: 0.4
+  baseExponential: 1.05
+  baseHorizontalMult: 0.4
 --- !u!114 &2124113227
 MonoBehaviour:
   m_ObjectHideFlags: 0
