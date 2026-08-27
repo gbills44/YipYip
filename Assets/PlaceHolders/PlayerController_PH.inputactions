@@ -10,7 +10,7 @@
                     "name": "Move",
                     "type": "Value",
                     "id": "98f0cd41-6754-4c8e-b0ee-99121753a86f",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true,
@@ -31,6 +31,26 @@
                     "type": "Button",
                     "id": "d62cf6ae-1443-434b-beb9-0667818c0943",
                     "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "3da039f8-1bd9-49eb-99b4-255973c9a999",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "YipBoost",
+                    "type": "Button",
+                    "id": "304993fa-149f-44b0-88ed-3b9092466027",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false,
@@ -255,6 +275,28 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a3c5762f-4531-452d-9056-06e2178f467b",
+                    "path": "<Joystick>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a090fe41-870c-4026-a556-8f1c13f871b6",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad;Joystick",
+                    "action": "YipBoost",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
