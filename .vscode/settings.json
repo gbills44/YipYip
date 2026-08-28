@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "rapid_one.slnx"
+    "dotnet.defaultSolution": "YipYip.slnx"
 }
