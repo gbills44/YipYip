@@ -6,20 +6,21 @@ public class PlayerController : MonoBehaviour
 {
 
     //public InputAction MoveAction;
-    
-    private float movementSpeed = 5.0f;
+    //private float movementSpeed = 5.0f;
     private Rigidbody2D pcRigidBody;
+    public GameTimer gameTimer;
     private Vector2 moveInput;
     private float jumpBtnInput;
-
     private float yipBtnInput;
+    private float debugInputSB;
     private float verticalVelocity;
     private float horizontalVelocity;
     public float baseVelocity = 5.0f;
     public float baseVerticalMult = 0.4f;
     public float baseExponential = 1.05f;
     public float baseHorizontalMult = 0.4f;
-    public float fakeTimer = 1.0f;
+    public float timerMultiplier = 0.01f;
+    //public float fakeTimer = 1.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
         pcRigidBody = GetComponent<Rigidbody2D>();
         verticalVelocity = baseVelocity + baseVerticalMult;
         horizontalVelocity = verticalVelocity * baseHorizontalMult;
+        timerMultiplier = gameTimer.Get_CurrentTime();
 
     }
 
@@ -44,6 +46,7 @@ public class PlayerController : MonoBehaviour
         //pcRigidBody.linearVelocity = moveInput * movementSpeed;
         //pcRigidBody.linearVelocityY = 5;
 
+        timerMultiplier = gameTimer.Get_CurrentTime();
         CalcVerticalVelocity();
         CalcHorizontalVelocity();
         pcRigidBody.linearVelocityY = verticalVelocity;
@@ -86,16 +89,21 @@ public class PlayerController : MonoBehaviour
     {
         yipBtnInput = context.ReadValue<float>();
         Debug.Log("YipBoost");
-        fakeTimer += 5.0f;
+    }
 
+    public void DebugSpaceBar(InputAction.CallbackContext context)
+    {
+        debugInputSB = context.ReadValue<float>();
+        Debug.Log("Spacebar debug");
+        Debug.Log("Vertical Velocity: " + verticalVelocity);
+        Debug.Log("Horizontal Velocity: " + horizontalVelocity);
     }
 
     private void CalcVerticalVelocity()
     {
         // design formula starting point 
         // velocity = baseVelocity + baseVerticalMult X t^(baseExponential)
-        verticalVelocity = baseVelocity + baseVerticalMult * Mathf.Pow(fakeTimer, baseExponential);
-        verticalVelocity = 1.0f;
+        verticalVelocity = baseVelocity + baseVerticalMult * Mathf.Pow(timerMultiplier, baseExponential);
     }
 
     private void CalcHorizontalVelocity()
