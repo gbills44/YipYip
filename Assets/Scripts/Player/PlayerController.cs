@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
         if(!b_sliding)
         {
             b_sliding = true;
-            IceSlideBoost(gameTimer.Get_CurrentTime());
+            //IceSlideBoost(gameTimer.Get_CurrentTime());
         }
     }
 
