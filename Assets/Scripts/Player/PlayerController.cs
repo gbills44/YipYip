@@ -24,9 +24,12 @@ public class PlayerController : MonoBehaviour
 
     // Alpine Ski Recreation vars below
     private bool b_activeBoost = false;
-    public float alpineSkiVelocity_y = 10.0f;
-    public float alpineSkiVelocity_x = 5.0f;
+    public float alpineSkiVelocity_y = 5.0f;
+    public float alpineSkiVelocity_x = 2.5f;
     public float alpineSkiBoost = 2.5f;
+    public float alpineBoostDuration = 1.0f;
+    private bool b_sliding = false;
+    private bool b_wipeout = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,7 +40,6 @@ public class PlayerController : MonoBehaviour
         verticalVelocity = baseVelocity + baseVerticalMult;
         horizontalVelocity = verticalVelocity * baseHorizontalMult;
         timerMultiplier = gameTimer.Get_CurrentTime();
-        baseVelocity = 5.0f;
 
     }
 
@@ -57,15 +59,9 @@ public class PlayerController : MonoBehaviour
         //pcRigidBody.linearVelocityY = verticalVelocity;
         //pcRigidBody.linearVelocityX = moveInput.x * horizontalVelocity;
 
-        // Alpine Ski Recreation code below
-        if(b_activeBoost)
-        {
-            alpineSkiVelocity_y = alpineSkiVelocity_y + alpineSkiBoost;
-        }
-        
+        // Alpine Ski Recreation code below  
         pcRigidBody.linearVelocityY = alpineSkiVelocity_y;
         pcRigidBody.linearVelocityX = alpineSkiVelocity_x * moveInput.x;
-        alpineSkiVelocity_y = baseVelocity;
     }
 
     public float get_VerticalVelocity()
@@ -105,7 +101,13 @@ public class PlayerController : MonoBehaviour
         yipBtnInput = context.ReadValue<float>();
         Debug.Log("YipBoost");
 
-        b_activeBoost = true;
+        if(!b_activeBoost)
+        {
+            b_activeBoost = true;
+            alpineSkiVelocity_y = alpineSkiVelocity_y + alpineSkiBoost;
+            BoostDelay(gameTimer.Get_CurrentTime());
+        }
+        
     }
 
     public void DebugSpaceBar(InputAction.CallbackContext context)
@@ -126,6 +128,39 @@ public class PlayerController : MonoBehaviour
     private void CalcHorizontalVelocity()
     {
         horizontalVelocity = verticalVelocity * baseHorizontalMult;
+    }
+
+    private void BoostDelay(float p_time)
+    {
+        float boostStart = p_time;
+        float boostEnd = boostStart + alpineBoostDuration;
+
+        do
+        {
+            b_activeBoost = true;
+        } while ((gameTimer.Get_CurrentTime() <= boostEnd));
+
+        b_activeBoost = false;
+        alpineSkiVelocity_y = baseVelocity;
+    }
+
+    // Needs to be called on collision with ice patch
+    private void IceSlide()
+    {
+        if(!b_sliding)
+        {
+            b_sliding = true;
+            //IceSlideBoost(gameTimer.Get_CurrentTime());
+        }
+    }
+
+    // Needs to be called on collision with obstacles
+    private void Wipeout()
+    {
+        pcRigidBody.linearVelocityX = 0;
+        pcRigidBody.linearVelocityY = 0;
+        alpineSkiVelocity_y = 0;
+        alpineSkiVelocity_x = 0;
     }
 
     public bool get_ActiveBoost()
@@ -164,5 +199,15 @@ public class PlayerController : MonoBehaviour
     public void set_AlpineSkiBoost(float p_vel)
     {
         alpineSkiBoost = p_vel;
+    }
+
+    public bool get_Sliding()
+    {
+        return b_sliding;
+    }
+
+    public void set_Sliding(bool p_slip)
+    {
+        b_sliding = p_slip;
     }
 }
