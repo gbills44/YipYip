@@ -204,14 +204,14 @@ RectTransform:
   m_GameObject: {fileID: 4907535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 299578786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 161.2, y: -280}
+  m_AnchoredPosition: {x: 591, y: -1042}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4907537
@@ -647,10 +647,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 10
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1440, y: 2304}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1047,12 +1047,20 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7642788373906158504, guid: 9b64dcbb9ba183049be2cf8270ba9c01, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642788373906158504, guid: 9b64dcbb9ba183049be2cf8270ba9c01, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642788373906158504, guid: 9b64dcbb9ba183049be2cf8270ba9c01, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -104.6
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 7642788373906158504, guid: 9b64dcbb9ba183049be2cf8270ba9c01, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 283.7
+      value: 1856
       objectReference: {fileID: 0}
     - target: {fileID: 8845111132550238025, guid: 9b64dcbb9ba183049be2cf8270ba9c01, type: 3}
       propertyPath: m_Name
@@ -12240,14 +12248,14 @@ RectTransform:
   m_GameObject: {fileID: 1214390687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8652209, y: 0.58748, z: 1}
+  m_LocalScale: {x: 3, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 299578786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -102, y: 284}
+  m_AnchoredPosition: {x: -557, y: 1029}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214390689
@@ -17835,14 +17843,14 @@ RectTransform:
   m_GameObject: {fileID: 2101872529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 299578786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -165.7, y: -280}
+  m_AnchoredPosition: {x: -587, y: -1042}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2101872531
@@ -17932,6 +17940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 790874064885247280, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
+      propertyPath: orthographic size
+      value: 6.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2194681033290616118, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
       propertyPath: gameTimer
       value: 
@@ -17978,11 +17990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6424979380329673793, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7940104868122757884, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
       propertyPath: m_SortingLayer
-      value: -1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7940104868122757884, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
       propertyPath: m_SortingOrder
