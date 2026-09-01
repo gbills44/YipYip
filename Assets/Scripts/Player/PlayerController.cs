@@ -55,14 +55,14 @@ public class PlayerController : MonoBehaviour
         //pcRigidBody.linearVelocity = moveInput * movementSpeed;
         //pcRigidBody.linearVelocityY = 5;
         //timerMultiplier = gameTimer.Get_CurrentTime();
-        //CalcVerticalVelocity();
-        //CalcHorizontalVelocity();
-        //pcRigidBody.linearVelocityY = verticalVelocity;
-        //pcRigidBody.linearVelocityX = moveInput.x * horizontalVelocity;
+        CalcVerticalVelocity();
+        CalcHorizontalVelocity();
+        pcRigidBody.linearVelocityY = verticalVelocity;
+        pcRigidBody.linearVelocityX = moveInput.x * horizontalVelocity;
 
         // Alpine Ski Recreation code below  
-        pcRigidBody.linearVelocityY = alpineSkiVelocity_y;
-        pcRigidBody.linearVelocityX = alpineSkiVelocity_x * moveInput.x;
+        //pcRigidBody.linearVelocityY = alpineSkiVelocity_y;
+        //pcRigidBody.linearVelocityX = alpineSkiVelocity_x * moveInput.x;
     }
 
     public float get_VerticalVelocity()
