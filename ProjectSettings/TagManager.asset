@@ -38,14 +38,23 @@ TagManager:
   - 
   - Background
   m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: Background
     uniqueID: 740982879
     locked: 0
   - name: Player
     uniqueID: 825236173
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: Rocks
+    uniqueID: 2235586055
+    locked: 0
+  - name: Trees
+    uniqueID: 536491397
+    locked: 0
+  - name: Flag
+    uniqueID: 838233851
     locked: 0
   - name: Borders
     uniqueID: 1653205133
