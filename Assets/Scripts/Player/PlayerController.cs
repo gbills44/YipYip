@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     public float alpineSkiBoost = 2.5f;
     public float alpineBoostDuration = 1.0f;
     private bool b_sliding = false;
+    private float iceBoost = 2.5f;
     private bool b_wipeout = false;
 
 
@@ -105,7 +106,7 @@ public class PlayerController : MonoBehaviour
         {
             b_activeBoost = true;
             alpineSkiVelocity_y = alpineSkiVelocity_y + alpineSkiBoost;
-            BoostDelay(gameTimer.Get_CurrentTime());
+            //BoostDelay(gameTimer.Get_CurrentTime());
         }
         
     }
@@ -150,8 +151,16 @@ public class PlayerController : MonoBehaviour
         if(!b_sliding)
         {
             b_sliding = true;
-            //IceSlideBoost(gameTimer.Get_CurrentTime());
+            IceSlideBoost();
         }
+    }
+
+    // Should pass the ice patch that collision occured with
+    private void IceSlideBoost()
+    {
+        Debug.Log("IceSlideBoost()");
+        alpineSkiVelocity_y += iceBoost;
+
     }
 
     // Needs to be called on collision with obstacles
@@ -161,6 +170,40 @@ public class PlayerController : MonoBehaviour
         pcRigidBody.linearVelocityY = 0;
         alpineSkiVelocity_y = 0;
         alpineSkiVelocity_x = 0;
+        Debug.Log("Wipeout");
+    }
+
+    // 2D physical collision check
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Rock"))
+        {
+            Wipeout();
+        }
+        else if(other.gameObject.CompareTag("Tree"))
+        {
+            Wipeout();
+        }
+    }
+
+    // Collision trigger check
+    // OnCollisionTriggerEnter2D
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("IceCollider"))
+        {
+            Debug.Log("Ice Collision");
+            IceSlide();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("IceCollider"))
+        {
+            alpineSkiVelocity_y -= iceBoost;
+            b_sliding = false;
+        }
     }
 
     public bool get_ActiveBoost()
@@ -199,6 +242,16 @@ public class PlayerController : MonoBehaviour
     public void set_AlpineSkiBoost(float p_vel)
     {
         alpineSkiBoost = p_vel;
+    }
+
+    public float get_IceBoost()
+    {
+        return iceBoost;
+    }
+
+    public void set_IceBoost(float p_boost)
+    {
+        iceBoost = p_boost;
     }
 
     public bool get_Sliding()
