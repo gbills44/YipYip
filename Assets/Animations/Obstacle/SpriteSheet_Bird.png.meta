@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 651fa1d67e24b4749a1e9b1b570c2956
+guid: 6943d9c4cd75d1a4aa7ad7d6296a8315
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3949927569093654600
-    second: Sprite_Deer_0
+      213: -1406618428669282125
+    second: Sprite_Bird_0
   - first:
-      213: 8198545716107901868
-    second: Sprite_Deer_1
+      213: -6252126750919819365
+    second: Sprite_Bird_1
   - first:
-      213: 3531911913854548625
-    second: Sprite_Deer_2
+      213: -7457373944176335745
+    second: Sprite_Bird_2
   - first:
-      213: -6934810644362604942
-    second: Sprite_Deer_3
+      213: 5002745760154282490
+    second: Sprite_Bird_3
+  - first:
+      213: -5575091707591531987
+    second: Sprite_Bird_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Deer_0
+      name: Sprite_Bird_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 11
-        width: 38
-        height: 50
+        x: 7
+        y: 4
+        width: 50
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 848795c4236f0d630800000000000000
-      internalID: 3949927569093654600
+      spriteID: 3b836a0edffaa7ce0800000000000000
+      internalID: -1406618428669282125
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Deer_1
+      name: Sprite_Bird_1
       rect:
         serializedVersion: 2
-        x: 83
-        y: 16
-        width: 38
-        height: 44
+        x: 71
+        y: 4
+        width: 50
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cab796b14e517c170800000000000000
-      internalID: 8198545716107901868
+      spriteID: b9ff4b068dbfb39a0800000000000000
+      internalID: -6252126750919819365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Deer_2
+      name: Sprite_Bird_2
       rect:
         serializedVersion: 2
-        x: 147
-        y: 16
+        x: 141
+        y: 4
         width: 38
-        height: 45
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19a354b3c2fd30130800000000000000
-      internalID: 3531911913854548625
+      spriteID: f74ad1c98e5128890800000000000000
+      internalID: -7457373944176335745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Deer_3
+      name: Sprite_Bird_3
       rect:
         serializedVersion: 2
-        x: 211
-        y: 11
-        width: 38
-        height: 50
+        x: 209
+        y: 5
+        width: 30
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +193,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27e4b2e067a92cf90800000000000000
-      internalID: -6934810644362604942
+      spriteID: af9669f53c25d6540800000000000000
+      internalID: 5002745760154282490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Bird_4
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 4
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d22e7ca41ab41a2b0800000000000000
+      internalID: -5575091707591531987
       vertices: []
       indices: 
       edges: []
@@ -210,10 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Deer_0: 3949927569093654600
-      Sprite_Deer_1: 8198545716107901868
-      Sprite_Deer_2: 3531911913854548625
-      Sprite_Deer_3: -6934810644362604942
+      Sprite_Bird_0: -1406618428669282125
+      Sprite_Bird_1: -6252126750919819365
+      Sprite_Bird_2: -7457373944176335745
+      Sprite_Bird_3: 5002745760154282490
+      Sprite_Bird_4: -5575091707591531987
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
