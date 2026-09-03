@@ -31,22 +31,39 @@ public class PlayerController : MonoBehaviour
     private bool b_sliding = false;
     private float iceBoost = 2.5f;
     private bool b_wipeout = false;
+    private Animator animator;
+    private bool canMove = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //MoveAction.Enable();
+        animator = GetComponent<Animator>();
         pcRigidBody = GetComponent<Rigidbody2D>();
         verticalVelocity = baseVelocity + baseVerticalMult;
         horizontalVelocity = verticalVelocity * baseHorizontalMult;
         timerMultiplier = gameTimer.Get_CurrentTime();
+        Invoke(nameof(StartMoving), 1f);
 
     }
+
+    private void StartMoving()
+    {
+        canMove = true;
+    }
+
 
     // Update is called once per frame
     void Update()
     {
+        // Wait 1 second before start moving
+        if (!canMove)
+        {
+            pcRigidBody.linearVelocity = Vector2.zero;
+            return;
+        }
+
         //Vector2 move = MoveAction.ReadValue<Vector2>();
         //Debug.Log(move);
         //Vector2 position = (Vector2)transform.position + move * 0.01f;
@@ -170,6 +187,7 @@ public class PlayerController : MonoBehaviour
         pcRigidBody.linearVelocityY = 0;
         alpineSkiVelocity_y = 0;
         alpineSkiVelocity_x = 0;
+        animator.SetTrigger("GameOver");
         Debug.Log("Wipeout");
     }
 

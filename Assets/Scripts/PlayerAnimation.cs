@@ -21,8 +21,5 @@ public class PlayerAnimation : MonoBehaviour
         Debug.Log("MoveX: " + horizontalVelocity);
     }
 
-    public void PlayCrash()
-    {
-        animator.SetTrigger("Crash");
-    }
+    
 }
