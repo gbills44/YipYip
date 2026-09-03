@@ -49,14 +49,11 @@ public class PlayerController : MonoBehaviour
     private bool b_activeBoost = false;
 
     // Alpine Ski Recreation vars below
-    /*
+    
     public float alpineSkiVelocity_y = 5.0f;
     public float alpineSkiVelocity_x = 2.5f;
     public float alpineSkiBoost = 2.5f;
     public float alpineBoostDuration = 1.0f;
-    private bool b_sliding = false;
-    private float iceBoost = 2.5f;
-    private bool b_wipeout = false;
     private Animator animator;
     private bool canMove = false;
 
@@ -72,22 +69,12 @@ public class PlayerController : MonoBehaviour
         horizontalVelocity = verticalVelocity * baseHorizontalMult;
         timerMultiplier = gameTimer.Get_CurrentTime();
         Invoke(nameof(StartMoving), 1f);
-        b_wipeout = false;
 
     }
 
     private void StartMoving()
     {
         canMove = true;
-        if(b_voiceToggle)
-        {
-            playerInput.actions = voiceIA;
-        }
-        else
-        {
-            playerInput.actions = buttonIA;
-        }
-
     }
 
 
