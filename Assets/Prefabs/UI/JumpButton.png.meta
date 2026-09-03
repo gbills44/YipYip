@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1889b95b07cc9764b8b25d09a34b859c
+guid: 23f96c5bb825bff4e90137a16ffbb8d0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3410274109710452141
-    second: Sprite_Rock_0
+      213: 9100849750941622500
+    second: JumpButton_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Rock_0
+      name: JumpButton_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 31
-        height: 25
+        x: 4
+        y: 3
+        width: 43
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35a3ffff3c54ca0d0800000000000000
-      internalID: -3410274109710452141
+      spriteID: 4e0e31f41a6bc4e70800000000000000
+      internalID: 9100849750941622500
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Rock_0: -3410274109710452141
+      JumpButton_0: 9100849750941622500
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

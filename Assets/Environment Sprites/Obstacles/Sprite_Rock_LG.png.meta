@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: a1f607410a74b9e4f97eeb7a289d95bd
+guid: 4271a3e99dbdc7b4caa994220c0fa1fa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8793639957104055765
-    second: idle_0
-  - first:
-      213: 6084859605308855041
-    second: idle_1
+      213: -8303345598369345029
+    second: Sprite_Rock_LG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_0
+      name: Sprite_Rock_LG_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 32
-        height: 63
+        x: 9
+        y: 9
+        width: 147
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d55ed543f8490a70800000000000000
-      internalID: 8793639957104055765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 1
-        width: 32
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 103de827293c17450800000000000000
-      internalID: 6084859605308855041
+      spriteID: bf154e9db2794cc80800000000000000
+      internalID: -8303345598369345029
       vertices: []
       indices: 
       edges: []
@@ -160,8 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      idle_0: 8793639957104055765
-      idle_1: 6084859605308855041
+      Sprite_Rock_LG_0: -8303345598369345029
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

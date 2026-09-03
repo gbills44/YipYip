@@ -1,22 +1,16 @@
 fileFormatVersion: 2
-guid: 87d4eb3746924574f977cd28dcce87af
+guid: e61a99491d5ae1649aeab34750c644c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1882347247711912902
-    second: run_0
+      213: -1170007448659844487
+    second: BoostButton_0
   - first:
-      213: 7439426567979852956
-    second: run_1
+      213: 6806213105925948895
+    second: BoostButton_1
   - first:
-      213: -2673560216460186399
-    second: run_2
-  - first:
-      213: -5822559823783948592
-    second: run_3
-  - first:
-      213: -4997308686002322044
-    second: run_4
+      213: -995702474532718709
+    second: BoostButton_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,111 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: run_0
+      name: BoostButton_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 2
-        width: 30
-        height: 61
+        x: 5
+        y: 37
+        width: 6
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3c723cb62f80e5e0800000000000000
-      internalID: -1882347247711912902
+      spriteID: 972a116ac6c43cfe0800000000000000
+      internalID: -1170007448659844487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: run_1
+      name: BoostButton_1
       rect:
         serializedVersion: 2
-        x: 33
+        x: 6
         y: 2
-        width: 30
-        height: 61
+        width: 41
+        height: 45
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c94ea0d3c072e3760800000000000000
-      internalID: 7439426567979852956
+      spriteID: fd5035c42c6847e50800000000000000
+      internalID: 6806213105925948895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: run_2
+      name: BoostButton_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 2
-        width: 30
-        height: 61
+        x: 4
+        y: 11
+        width: 6
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ec2644f52b95ead0800000000000000
-      internalID: -2673560216460186399
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run_3
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 2
-        width: 30
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0de85e380bc123fa0800000000000000
-      internalID: -5822559823783948592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run_4
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 2
-        width: 30
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4858bd91a3ef5aab0800000000000000
-      internalID: -4997308686002322044
+      spriteID: b87ff77ffdd8e22f0800000000000000
+      internalID: -995702474532718709
       vertices: []
       indices: 
       edges: []
@@ -225,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c5fb40e59096f3a4b8479af7a491bb9b
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -233,15 +183,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      run_0: -1882347247711912902
-      run_1: 7439426567979852956
-      run_2: -2673560216460186399
-      run_3: -5822559823783948592
-      run_4: -4997308686002322044
+      BoostButton_0: -1170007448659844487
+      BoostButton_1: 6806213105925948895
+      BoostButton_2: -995702474532718709
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
