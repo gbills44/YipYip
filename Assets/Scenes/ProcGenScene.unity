@@ -9974,6 +9974,83 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &751511089
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3037784555781953165, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1791740436}
+    - target: {fileID: 3037784555781953165, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 477687949}
+    - target: {fileID: 3037784555781953165, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: obstaclePrefab
+      value: 
+      objectReference: {fileID: 8785771002996681437, guid: 44c5396b3ff3ac642ba31698b4168e06, type: 3}
+    - target: {fileID: 3037784555781953165, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: spawnTimeDelay
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037784555781953165, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: obstacleSpawnDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939579538833360588, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.96205
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939579538833360588, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.28323
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939579538833360588, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939579538833360588, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939579538833360588, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939579538833360588, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939579538833360588, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939579538833360588, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939579538833360588, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939579538833360588, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400932045867035558, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
+      propertyPath: m_Name
+      value: ObstacleSpawner (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 504df8542a116bb3499eddba9710ebc8, type: 3}
 --- !u!1001 &806953597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16605,3 +16682,4 @@ SceneRoots:
   - {fileID: 806953597}
   - {fileID: 902130702907249613}
   - {fileID: 1197342699}
+  - {fileID: 751511089}
