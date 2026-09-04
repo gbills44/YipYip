@@ -71,11 +71,12 @@ public class ObstacleSpawner : MonoBehaviour
         UnityEngine.Vector3 spawnLocation = new UnityEngine.Vector3 (spawnX, spawnY, spawnZ);
         GameObject spawnedObstacle = Instantiate(obstaclePrefab, spawnLocation, Quaternion.identity);
 
-        DestroyDelay(spawnedObstacle);
+        //DestroyDelay(spawnedObstacle);
     }
 
     private void DestroyDelay(GameObject p_obstacle)
     {
+        /*
         if(p_obstacle != null)
         {
             do
@@ -88,5 +89,6 @@ public class ObstacleSpawner : MonoBehaviour
                 }
             } while (p_obstacle != null);
         }
+        */
     }
 }
