@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         //moveInput.y = 0;
         //pcRigidBody.linearVelocity = moveInput * movementSpeed;
         //pcRigidBody.linearVelocityY = 5;
-        //timerMultiplier = gameTimer.Get_CurrentTime();
+        timerMultiplier = gameTimer.Get_CurrentTime();
         CalcVerticalVelocity();
         CalcHorizontalVelocity();
         pcRigidBody.linearVelocityY = verticalVelocity;
