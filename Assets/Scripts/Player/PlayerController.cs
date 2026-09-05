@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     public float baseHorizontalMult = 0.4f;
     public float timerMultiplier = 0.01f;
     private bool b_sliding = false;
+    private bool b_jumping = false;
     private float iceBoost = 2.5f;
     private bool b_wipeout = false;
     private bool b_activeBoost = false;
@@ -57,6 +59,7 @@ public class PlayerController : MonoBehaviour
         horizontalVelocity = verticalVelocity * baseHorizontalMult;
         timerMultiplier = gameTimer.Get_CurrentTime();
         Invoke(nameof(StartMoving), 1f);
+        b_wipeout = false;
 
     }
 
@@ -131,7 +134,13 @@ public class PlayerController : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         jumpBtnInput = context.ReadValue<float>();
-        Debug.Log("Jump - Needs to do something");
+        Debug.Log("Jump");
+
+        if(!b_jumping)
+        {
+            b_jumping = true;
+        }
+
     }
 
     // No check to stop player from infinite boost
@@ -210,6 +219,9 @@ public class PlayerController : MonoBehaviour
         alpineSkiVelocity_x = 0;
         animator.SetTrigger("GameOver");
         Debug.Log("Wipeout");
+        b_wipeout = true;
+
+        // Call Game End
     }
 
     // 2D physical collision check
@@ -233,6 +245,17 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Ice Collision");
             IceSlide();
+        }
+        else if(other.gameObject.CompareTag("Rock"))
+        {
+            if(b_jumping)
+            {
+                Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
+                Destroy(rb);
+                BoxCollider2D boxColl = other.GetComponent<BoxCollider2D>();
+                Destroy(boxColl);
+            }
+            
         }
     }
 
@@ -313,5 +336,15 @@ public class PlayerController : MonoBehaviour
     public void set_Sliding(bool p_slip)
     {
         b_sliding = p_slip;
+    }
+
+    public bool get_Jumping()
+    {
+        return b_jumping;
+    }
+
+    public void set_jumping(bool p_jump)
+    {
+        b_jumping = p_jump;
     }
 }
