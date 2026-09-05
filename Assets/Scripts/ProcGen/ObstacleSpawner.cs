@@ -8,11 +8,12 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameTimer timer;
 
+    // based on map width
     private int spawnRangeMinX = -10;
     private int spawnRangeMaxX = 10;
-    private int distanceUntilObstacleSpawn;
-    private float lastSpawnPoint = 0.0f;
-    public float obstacleSpawnDistance = 5.0f;
+    private UnityEngine.Vector3 lastSpawnPoint = new UnityEngine.Vector3(0.0f, 0.0f, 0.0f);
+    public float obstacleSpawnDistanceMin = 5.0f;
+    public float obstacleSpawnDistanceMax = 6.0f;
     public int numObstacles = 1;
     public float spawnTimeDelay = 0.0f;
     public float spawnOriginDistance = 28.0f;
@@ -37,35 +38,29 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void SpawnLoop()
     {
-        /*
-        distanceUntilObstacleSpawn = MathF.Floor(player.transform.position.y);
 
-        if(distanceUntilObstacleSpawn >= obstacleSpawnDistance)
+        if((lastSpawnPoint.y + obstacleSpawnDistanceMin) <= player.transform.position.y)
         {
             for(int i = 0; i < numObstacles; i++)
             {
-                Spawn();
+                float spawnPoint = Random.Range(obstacleSpawnDistanceMin, obstacleSpawnDistanceMax);
+                Spawn(spawnPoint);
             }
-            distanceUntilObstacleSpawn = 0.0f;
-            lastSpawnPoint = player.transform.position.y;
-        }
-        */
-
-        // I want to check if player has moved at least 5.0f blocks since last spawn
-        if((lastSpawnPoint + obstacleSpawnDistance) <= player.transform.position.y)
-        {
-            for(int i = 0; i < numObstacles; i++)
-            {
-                Spawn();
-            }
-            lastSpawnPoint = player.transform.position.y;
+            lastSpawnPoint.y = player.transform.position.y;
         }
 
     }
 
-    private void Spawn()
-    {
-        int spawnX = Random.Range(spawnRangeMinX, spawnRangeMaxX);
+    private void Spawn(float p_spawnPoint)
+    { 
+        int spawnX = 0;
+        
+        do
+        {
+            spawnX = Random.Range(spawnRangeMinX, spawnRangeMaxX);
+
+        } while (spawnX == lastSpawnPoint.x);
+
         float spawnY = player.transform.position.y + spawnOriginDistance;
         float spawnZ = 0;
         UnityEngine.Vector3 spawnLocation = new UnityEngine.Vector3 (spawnX, spawnY, spawnZ);

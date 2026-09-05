@@ -50,6 +50,9 @@ TagManager:
   - name: Player
     uniqueID: 825236173
     locked: 0
+  - name: MovingObstacles
+    uniqueID: 865454259
+    locked: 0
   - name: Rocks
     uniqueID: 2235586055
     locked: 0
