@@ -242,6 +242,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 176308f1-d36e-4727-ac4c-066add5c0d9f
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1e9920d1-c416-4329-b417-c3bc891a97ce
+    m_ActionName: 'Voice/Jump[/SmartCloudDuckyOKM65GamingKeyboardSystemControl/trigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1c5d6a19-1b36-4cf9-bc86-5d28ce7ecd7d
+    m_ActionName: 'Voice/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/SmartCloudDuckyOKM65GamingKeyboardSystemControl/stick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 168d2607-5027-4f9a-8f05-77df36dbf140
+    m_ActionName: 'Voice/YipBoost[/SmartCloudDuckyOKM65GamingKeyboardSystemControl/stick/up]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 30547831-d494-4a13-9b95-196ab019b65c
+    m_ActionName: 'Voice/Debug[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -259,16 +275,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5639b1e8e7b7b8643a224705aa8dd9aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  gameTimer: {fileID: 0}
+  voiceIA: {fileID: -944628639613478452, guid: 8c16535534b816bb0bb96a27c05e567c, type: 3}
+  buttonIA: {fileID: -944628639613478452, guid: e5777f6575819f941afa43b2e5d5f907, type: 3}
+  gameTimer: {fileID: 2834959434466973204, guid: 9b64dcbb9ba183049be2cf8270ba9c01, type: 3}
   baseVelocity: 5
   baseVerticalMult: 0.4
   baseExponential: 1.05
   baseHorizontalMult: 0.4
   timerMultiplier: 0.01
-  alpineSkiVelocity_y: 5
-  alpineSkiVelocity_x: 2.5
-  alpineSkiBoost: 2.5
-  alpineBoostDuration: 1
 --- !u!114 &3493354873383644728
 MonoBehaviour:
   m_ObjectHideFlags: 0
