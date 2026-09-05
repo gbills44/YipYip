@@ -7,16 +7,6 @@
             "id": "97333c0e-43d8-41c8-85cf-a3be9308507a",
             "actions": [
                 {
-                    "name": "Move",
-                    "type": "Value",
-                    "id": "98f0cd41-6754-4c8e-b0ee-99121753a86f",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
-                },
-                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "3da039f8-1bd9-49eb-99b4-255973c9a999",
@@ -24,6 +14,16 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "98f0cd41-6754-4c8e-b0ee-99121753a86f",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
                     "priority": 0
                 },
                 {
@@ -183,10 +183,10 @@
                 {
                     "name": "",
                     "id": "a090fe41-870c-4026-a556-8f1c13f871b6",
-                    "path": "<Joystick>/trigger",
+                    "path": "<Joystick>/stick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad;Joystick",
+                    "groups": ";Gamepad",
                     "action": "YipBoost",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -199,6 +199,17 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Debug",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1bc38ef6-a936-4f20-a241-7b3d61ac61fa",
+                    "path": "<Joystick>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
