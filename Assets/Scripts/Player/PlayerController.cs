@@ -7,12 +7,20 @@ public class PlayerController : MonoBehaviour
 
     //public InputAction MoveAction;
     //private float movementSpeed = 5.0f;
+    [SerializeField] private InputActionAsset voiceIA;
+    [SerializeField] private InputActionAsset buttonIA;
+
     private Rigidbody2D pcRigidBody;
+    private PlayerInput playerInput;
     public GameTimer gameTimer;
+    
+    private bool b_voiceToggle = false;
+    
     private Vector2 moveInput;
     private float jumpBtnInput;
     private float yipBtnInput;
     private float debugInputSB;
+
     private float verticalVelocity;
     private float horizontalVelocity;
     public float baseVelocity = 5.0f;
@@ -20,17 +28,18 @@ public class PlayerController : MonoBehaviour
     public float baseExponential = 1.05f;
     public float baseHorizontalMult = 0.4f;
     public float timerMultiplier = 0.01f;
-    //public float fakeTimer = 1.0f;
+    private bool b_sliding = false;
+    private float iceBoost = 2.5f;
+    private bool b_wipeout = false;
+    private bool b_activeBoost = false;
 
     // Alpine Ski Recreation vars below
-    private bool b_activeBoost = false;
+    /*
     public float alpineSkiVelocity_y = 5.0f;
     public float alpineSkiVelocity_x = 2.5f;
     public float alpineSkiBoost = 2.5f;
     public float alpineBoostDuration = 1.0f;
-    private bool b_sliding = false;
-    private float iceBoost = 2.5f;
-    private bool b_wipeout = false;
+    */
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -38,9 +47,19 @@ public class PlayerController : MonoBehaviour
     {
         //MoveAction.Enable();
         pcRigidBody = GetComponent<Rigidbody2D>();
+        playerInput = GetComponent<PlayerInput>();
         verticalVelocity = baseVelocity + baseVerticalMult;
         horizontalVelocity = verticalVelocity * baseHorizontalMult;
         timerMultiplier = gameTimer.Get_CurrentTime();
+
+        if(b_voiceToggle)
+        {
+            playerInput.actions = voiceIA;
+        }
+        else
+        {
+            playerInput.actions = buttonIA;
+        }
 
     }
 
@@ -105,7 +124,7 @@ public class PlayerController : MonoBehaviour
         if(!b_activeBoost)
         {
             b_activeBoost = true;
-            alpineSkiVelocity_y = alpineSkiVelocity_y + alpineSkiBoost;
+            
             //BoostDelay(gameTimer.Get_CurrentTime());
         }
         
@@ -134,7 +153,7 @@ public class PlayerController : MonoBehaviour
     private void BoostDelay(float p_time)
     {
         float boostStart = p_time;
-        float boostEnd = boostStart + alpineBoostDuration;
+        float boostEnd = boostStart + 1;
 
         do
         {
@@ -142,7 +161,7 @@ public class PlayerController : MonoBehaviour
         } while ((gameTimer.Get_CurrentTime() <= boostEnd));
 
         b_activeBoost = false;
-        alpineSkiVelocity_y = baseVelocity;
+        //alpineSkiVelocity_y = baseVelocity;
     }
 
     // Needs to be called on collision with ice patch
@@ -159,7 +178,7 @@ public class PlayerController : MonoBehaviour
     private void IceSlideBoost()
     {
         Debug.Log("IceSlideBoost()");
-        alpineSkiVelocity_y += iceBoost;
+        //alpineSkiVelocity_y += iceBoost;
 
     }
 
@@ -168,8 +187,8 @@ public class PlayerController : MonoBehaviour
     {
         pcRigidBody.linearVelocityX = 0;
         pcRigidBody.linearVelocityY = 0;
-        alpineSkiVelocity_y = 0;
-        alpineSkiVelocity_x = 0;
+        //alpineSkiVelocity_y = 0;
+        //alpineSkiVelocity_x = 0;
         Debug.Log("Wipeout");
     }
 
@@ -201,7 +220,7 @@ public class PlayerController : MonoBehaviour
     {
         if(other.gameObject.CompareTag("IceCollider"))
         {
-            alpineSkiVelocity_y -= iceBoost;
+            //alpineSkiVelocity_y -= iceBoost;
             b_sliding = false;
         }
     }
@@ -216,6 +235,17 @@ public class PlayerController : MonoBehaviour
         b_activeBoost = p_boost;
     }
 
+    public bool get_VoiceToggle()
+    {
+        return b_voiceToggle;
+    }
+
+    public void set_VoiceToggle(bool p_toggle)
+    {
+        b_voiceToggle = p_toggle;
+    }
+
+    /*
     public float get_AlpineSkiVelocityY()
     {
         return alpineSkiVelocity_y;
@@ -243,6 +273,7 @@ public class PlayerController : MonoBehaviour
     {
         alpineSkiBoost = p_vel;
     }
+    */
 
     public float get_IceBoost()
     {
