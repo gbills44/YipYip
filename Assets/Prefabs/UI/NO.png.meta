@@ -1,25 +1,13 @@
 fileFormatVersion: 2
-guid: 337d7e2311eb0ce40a45063556f633b6
+guid: efa302695e1627c46a02d42d3bd4b1c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4518521311217487784
-    second: Ulose_0
+      213: 1135112129639667522
+    second: lose_0
   - first:
-      213: -8749247490434620746
-    second: Ulose_1
-  - first:
-      213: -4648172541485131158
-    second: Ulose_2
-  - first:
-      213: -7709157230106433080
-    second: Ulose_3
-  - first:
-      213: 4147850264065652677
-    second: Ulose_4
-  - first:
-      213: 4940011132228179326
-    second: Ulose_5
+      213: 8875718442503512415
+    second: lose_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,12 +103,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ulose_0
+      name: lose_0
       rect:
         serializedVersion: 2
         x: 0
         y: 7
-        width: 34
+        width: 39
         height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -130,19 +118,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8af8621413305be30800000000000000
-      internalID: 4518521311217487784
+      spriteID: 247d863c77ab0cf00800000000000000
+      internalID: 1135112129639667522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ulose_1
+      name: lose_1
       rect:
         serializedVersion: 2
-        x: 29
-        y: 30
-        width: 16
+        x: 38
+        y: 26
+        width: 10
         height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -152,96 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b2aaa053cd649680800000000000000
-      internalID: -8749247490434620746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ulose_2
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 8
-        width: 12
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a6add0a53bf5e7fb0800000000000000
-      internalID: -4648172541485131158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ulose_3
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 8
-        width: 11
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c92fd51852930590800000000000000
-      internalID: -7709157230106433080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ulose_4
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 8
-        width: 10
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5c7b423c6df109930800000000000000
-      internalID: 4147850264065652677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ulose_5
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 8
-        width: 10
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e759fe293f17e8440800000000000000
-      internalID: 4940011132228179326
+      spriteID: f512ecbd5e2ec2b70800000000000000
+      internalID: 8875718442503512415
       vertices: []
       indices: 
       edges: []
@@ -260,12 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ulose_0: 4518521311217487784
-      Ulose_1: -8749247490434620746
-      Ulose_2: -4648172541485131158
-      Ulose_3: -7709157230106433080
-      Ulose_4: 4147850264065652677
-      Ulose_5: 4940011132228179326
+      lose_0: 1135112129639667522
+      lose_1: 8875718442503512415
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
