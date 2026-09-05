@@ -1989,7 +1989,7 @@ PrefabInstance:
     - target: {fileID: 3037784555781953165, guid: 9a164865890961ec18fa1170125ce08e, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 260418099}
     - target: {fileID: 3037784555781953165, guid: 9a164865890961ec18fa1170125ce08e, type: 3}
       propertyPath: player
       value: 
@@ -10055,7 +10055,7 @@ PrefabInstance:
     - target: {fileID: 3037784555781953165, guid: 9c095b7a83500becf9986278de1d88d3, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 260418099}
     - target: {fileID: 3037784555781953165, guid: 9c095b7a83500becf9986278de1d88d3, type: 3}
       propertyPath: player
       value: 
@@ -10300,6 +10300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 543880281096147862, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2194681033290616118, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
       propertyPath: gameTimer
       value: 
@@ -10345,7 +10349,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3811380705264995972, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
@@ -10472,7 +10477,7 @@ PrefabInstance:
     - target: {fileID: 3037784555781953165, guid: 81fbddc42beb0c2b6b38e744530d97f9, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 260418099}
     - target: {fileID: 3037784555781953165, guid: 81fbddc42beb0c2b6b38e744530d97f9, type: 3}
       propertyPath: player
       value: 
