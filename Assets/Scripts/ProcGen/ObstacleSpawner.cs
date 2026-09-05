@@ -8,11 +8,12 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameTimer timer;
 
+    // based on map width
     private int spawnRangeMinX = -10;
     private int spawnRangeMaxX = 10;
-    private int distanceUntilObstacleSpawn;
     private UnityEngine.Vector3 lastSpawnPoint = new UnityEngine.Vector3(0.0f, 0.0f, 0.0f);
-    public float obstacleSpawnDistance = 5.0f;
+    public float obstacleSpawnDistanceMin = 5.0f;
+    public float obstacleSpawnDistanceMax = 6.0f;
     public int numObstacles = 1;
     public float spawnTimeDelay = 0.0f;
     public float spawnOriginDistance = 28.0f;
@@ -37,18 +38,20 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void SpawnLoop()
     {
-        if((lastSpawnPoint.y + obstacleSpawnDistance) <= player.transform.position.y)
+
+        if((lastSpawnPoint.y + obstacleSpawnDistanceMin) <= player.transform.position.y)
         {
             for(int i = 0; i < numObstacles; i++)
             {
-                Spawn();
+                float spawnPoint = Random.Range(obstacleSpawnDistanceMin, obstacleSpawnDistanceMax);
+                Spawn(spawnPoint);
             }
             lastSpawnPoint.y = player.transform.position.y;
         }
 
     }
 
-    private void Spawn()
+    private void Spawn(float p_spawnPoint)
     { 
         int spawnX = 0;
         
