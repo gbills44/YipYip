@@ -44,10 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4cf25deb575c7eb8bf6131905f9e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
-  obstaclePrefab: {fileID: 0}
+  obstaclePrefab: {fileID: 7340853412966121964, guid: f7b391f7d1113874b907364e33b4a366, type: 3}
   player: {fileID: 0}
   timer: {fileID: 0}
-  obstacleSpawnDistance: 5
+  obstacleSpawnDistanceMin: 5
+  obstacleSpawnDistanceMax: 6
   numObstacles: 1
   spawnTimeDelay: 0
   spawnOriginDistance: 28

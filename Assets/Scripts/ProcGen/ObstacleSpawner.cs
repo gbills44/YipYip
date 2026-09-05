@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using UnityEditor;
 using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
@@ -44,13 +45,35 @@ public class ObstacleSpawner : MonoBehaviour
             for(int i = 0; i < numObstacles; i++)
             {
                 float spawnPoint = Random.Range(obstacleSpawnDistanceMin, obstacleSpawnDistanceMax);
-                Spawn(spawnPoint);
+                //Spawn(spawnPoint);
+                SpawnPrefab();
             }
             lastSpawnPoint.y = player.transform.position.y;
         }
 
     }
 
+    private void SpawnPrefab()
+    {
+        int spawnX = 0;
+
+        do
+        {
+            spawnX = Random.Range(spawnRangeMinX, spawnRangeMaxX);
+
+        } while (spawnX == lastSpawnPoint.x);
+
+        float spawnY = player.transform.position.y + spawnOriginDistance;
+        float spawnZ = 0.0f;
+        UnityEngine.Vector3 spawnLocation = new UnityEngine.Vector3 (spawnX, spawnY, spawnZ);
+        GameObject spawnedObstacle = PrefabUtility.InstantiatePrefab(obstaclePrefab) as GameObject;
+        spawnedObstacle.transform.position = spawnLocation;
+        UnityEngine.Debug.Log("SO-ID: " + spawnedObstacle.GetInstanceID());
+        DestroyDelay(ref spawnedObstacle);
+    }
+
+    // Deprecated spawn function
+/*
     private void Spawn(float p_spawnPoint)
     { 
         int spawnX = 0;
@@ -65,12 +88,18 @@ public class ObstacleSpawner : MonoBehaviour
         float spawnZ = 0;
         UnityEngine.Vector3 spawnLocation = new UnityEngine.Vector3 (spawnX, spawnY, spawnZ);
         GameObject spawnedObstacle = Instantiate(obstaclePrefab, spawnLocation, Quaternion.identity);
-
-        //DestroyDelay(spawnedObstacle);
+        spawnedObstacle.transform.position = spawnLocation;
+        DestroyDelay(ref spawnedObstacle);
     }
+    */
 
-    private void DestroyDelay(GameObject p_obstacle)
+    private void DestroyDelay(ref UnityEngine.GameObject p_obstacle)
     {
+        UnityEngine.Debug.Log("Destroy Delay");
+        if(p_obstacle != null)
+        {
+            UnityEngine.Debug.Log("p_obstacle non null");
+        }
         /*
         if(p_obstacle != null)
         {
@@ -85,5 +114,6 @@ public class ObstacleSpawner : MonoBehaviour
             } while (p_obstacle != null);
         }
         */
+        
     }
 }
