@@ -101,6 +101,8 @@ public class PlayerController : MonoBehaviour
         pcRigidBody.linearVelocityY = verticalVelocity;
         pcRigidBody.linearVelocityX = moveInput.x * horizontalVelocity;
 
+        Debug.Log("Vertical Velocity: " + verticalVelocity);
+
         // Alpine Ski Recreation code below  
         //pcRigidBody.linearVelocityY = alpineSkiVelocity_y;
         //pcRigidBody.linearVelocityX = alpineSkiVelocity_x * moveInput.x;
