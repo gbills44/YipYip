@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 4699292114445974321}
   - component: {fileID: 2293085920197407300}
   - component: {fileID: 8577719203477001684}
-  m_Layer: 0
+  - component: {fileID: 4283216001111118369}
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Rock
   m_Icon: {fileID: 0}
@@ -201,8 +202,20 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.17229074, y: 0}
+  m_Offset: {x: 0, y: -0.5}
   m_Radius: 0.90729076
+--- !u!114 &4283216001111118369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5023152006780708388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03726fb58d0af1d7d803312e7c5880db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &8745361452410429193
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +227,7 @@ GameObject:
   - component: {fileID: 2015503810336277508}
   - component: {fileID: 1408216064866062780}
   - component: {fileID: 6560516569607889220}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock
   m_TagString: RockBaseObject
   m_Icon: {fileID: 0}
