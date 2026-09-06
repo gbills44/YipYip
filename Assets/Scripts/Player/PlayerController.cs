@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
     private bool canMove = false;
 
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -69,6 +70,7 @@ public class PlayerController : MonoBehaviour
         horizontalVelocity = verticalVelocity * baseHorizontalMult;
         timerMultiplier = gameTimer.Get_CurrentTime();
         Invoke(nameof(StartMoving), 1f);
+        b_wipeout = false;
 
     }
 
@@ -100,10 +102,7 @@ public class PlayerController : MonoBehaviour
         CalcVerticalVelocity();
         CalcHorizontalVelocity();
         CalcPlayerScore();
-        pcRigidBody.linearVelocityY = verticalVelocity;
-        pcRigidBody.linearVelocityX = moveInput.x * horizontalVelocity;
 
-        Debug.Log("Vertical Velocity: " + verticalVelocity);
 
         //pcRigidBody.linearVelocityY = verticalVelocity;
         //pcRigidBody.linearVelocityX = moveInput.x * horizontalVelocity;
