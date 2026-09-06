@@ -11,9 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main_Menu.unity
     guid: 8325b8649d5eb724eb599ff82ab013ae
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AlpineSki_PlayTest.unity
     guid: aff08772b2d17f84f8ce92f6224c4855
+  - enabled: 1
+    path: Assets/Scenes/ProcGenScene.unity
+    guid: dfeda911c1d8ef31bb618aa0dfdb8178
+  - enabled: 1
+    path: Assets/Scenes/Leaderboard.unity
+    guid: fd39e1b5096a59d44b7a39686478981e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
