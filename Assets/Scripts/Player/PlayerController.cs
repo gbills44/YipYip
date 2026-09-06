@@ -49,39 +49,47 @@ public class PlayerController : MonoBehaviour
     private bool b_activeBoost = false;
 
     // Alpine Ski Recreation vars below
-    /*
+    
     public float alpineSkiVelocity_y = 5.0f;
     public float alpineSkiVelocity_x = 2.5f;
     public float alpineSkiBoost = 2.5f;
     public float alpineBoostDuration = 1.0f;
-    */
+    private Animator animator;
+    private bool canMove = false;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //MoveAction.Enable();
+        animator = GetComponent<Animator>();
         pcRigidBody = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
         verticalVelocity = baseVelocity + baseVerticalMult;
         horizontalVelocity = verticalVelocity * baseHorizontalMult;
         timerMultiplier = gameTimer.Get_CurrentTime();
+        Invoke(nameof(StartMoving), 1f);
         b_wipeout = false;
 
-        if(b_voiceToggle)
-        {
-            playerInput.actions = voiceIA;
-        }
-        else
-        {
-            playerInput.actions = buttonIA;
-        }
-
     }
+
+    private void StartMoving()
+    {
+        canMove = true;
+    }
+
 
     // Update is called once per frame
     void Update()
     {
+        // Wait 1 second before start moving
+        if (!canMove)
+        {
+            pcRigidBody.linearVelocity = Vector2.zero;
+            return;
+        }
+
         //Vector2 move = MoveAction.ReadValue<Vector2>();
         //Debug.Log(move);
         //Vector2 position = (Vector2)transform.position + move * 0.01f;
@@ -244,8 +252,9 @@ public class PlayerController : MonoBehaviour
     {
         pcRigidBody.linearVelocityX = 0;
         pcRigidBody.linearVelocityY = 0;
-        //alpineSkiVelocity_y = 0;
-        //alpineSkiVelocity_x = 0;
+        alpineSkiVelocity_y = 0;
+        alpineSkiVelocity_x = 0;
+        animator.SetTrigger("GameOver");
         Debug.Log("Wipeout");
         b_wipeout = true;
 

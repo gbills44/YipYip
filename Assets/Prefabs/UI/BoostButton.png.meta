@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 3aac872a6d12f09468a466c7d37d5be0
+guid: e61a99491d5ae1649aeab34750c644c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 378990857134542062
-    second: Sprite_Tree_0
+      213: -1170007448659844487
+    second: BoostButton_0
+  - first:
+      213: 6806213105925948895
+    second: BoostButton_1
+  - first:
+      213: -995702474532718709
+    second: BoostButton_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Tree_0
+      name: BoostButton_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 39
-        width: 32
-        height: 25
+        x: 5
+        y: 37
+        width: 6
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eec00a43d22724500800000000000000
-      internalID: 378990857134542062
+      spriteID: 972a116ac6c43cfe0800000000000000
+      internalID: -1170007448659844487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoostButton_1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5035c42c6847e50800000000000000
+      internalID: 6806213105925948895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoostButton_2
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 11
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b87ff77ffdd8e22f0800000000000000
+      internalID: -995702474532718709
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 09a7fb1eb4b6d274a80d2d5e5ba5cbcc
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Tree_0: 378990857134542062
+      BoostButton_0: -1170007448659844487
+      BoostButton_1: 6806213105925948895
+      BoostButton_2: -995702474532718709
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

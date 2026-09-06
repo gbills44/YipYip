@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3aac872a6d12f09468a466c7d37d5be0
+guid: a218abbe81df21147994a1838d4d0bd2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 378990857134542062
-    second: Sprite_Tree_0
+      213: 8572043569924737516
+    second: RestartButton_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Tree_0
+      name: RestartButton_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 39
-        width: 32
-        height: 25
+        x: 5
+        y: 6
+        width: 40
+        height: 41
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eec00a43d22724500800000000000000
-      internalID: 378990857134542062
+      spriteID: ce90980d53406f670800000000000000
+      internalID: 8572043569924737516
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 09a7fb1eb4b6d274a80d2d5e5ba5cbcc
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Tree_0: 378990857134542062
+      RestartButton_0: 8572043569924737516
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

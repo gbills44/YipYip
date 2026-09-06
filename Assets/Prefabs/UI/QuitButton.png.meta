@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 3aac872a6d12f09468a466c7d37d5be0
+<<<<<<<< HEAD:Assets/Prefabs/UI/QuitButton.png.meta
+guid: 8135c2cb4c19e554c87a2e296f234378
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 378990857134542062
-    second: Sprite_Tree_0
+      213: 4304446102398311253
+    second: QuitButton_0
+========
+guid: cc572685363f5ec4cb97fb08ed0d9028
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5251734906795025119
+    second: snow_0
+>>>>>>>> trunk:Assets/Prefabs/UI/snow.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,23 +109,38 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Tree_0
+<<<<<<<< HEAD:Assets/Prefabs/UI/QuitButton.png.meta
+      name: QuitButton_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 39
-        width: 32
-        height: 25
+        x: 7
+        y: 8
+        width: 35
+        height: 35
+========
+      name: snow_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 42
+        height: 42
+>>>>>>>> trunk:Assets/Prefabs/UI/snow.png.meta
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eec00a43d22724500800000000000000
-      internalID: 378990857134542062
+<<<<<<<< HEAD:Assets/Prefabs/UI/QuitButton.png.meta
+      spriteID: 55b14489ce67cbb30800000000000000
+      internalID: 4304446102398311253
+========
+      spriteID: fd26906a219e1e840800000000000000
+      internalID: 5251734906795025119
+>>>>>>>> trunk:Assets/Prefabs/UI/snow.png.meta
       vertices: []
       indices: 
       edges: []
@@ -125,7 +149,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 09a7fb1eb4b6d274a80d2d5e5ba5cbcc
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +159,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Tree_0: 378990857134542062
+<<<<<<<< HEAD:Assets/Prefabs/UI/QuitButton.png.meta
+      QuitButton_0: 4304446102398311253
+========
+      snow_0: 5251734906795025119
+>>>>>>>> trunk:Assets/Prefabs/UI/snow.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

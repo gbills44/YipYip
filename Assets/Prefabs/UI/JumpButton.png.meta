@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 3aac872a6d12f09468a466c7d37d5be0
+<<<<<<<< HEAD:Assets/Prefabs/UI/JumpButton.png.meta
+guid: 23f96c5bb825bff4e90137a16ffbb8d0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 378990857134542062
-    second: Sprite_Tree_0
+      213: 9100849750941622500
+    second: JumpButton_0
+========
+guid: a996a2e620c1c0749ab22c0ad495a852
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6813374612988561086
+    second: sticker_0
+>>>>>>>> trunk:Assets/Prefabs/UI/sticker.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,23 +109,38 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Tree_0
+<<<<<<<< HEAD:Assets/Prefabs/UI/JumpButton.png.meta
+      name: JumpButton_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 3
+        width: 43
+        height: 43
+========
+      name: sticker_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 39
-        width: 32
-        height: 25
+        y: 0
+        width: 50
+        height: 80
+>>>>>>>> trunk:Assets/Prefabs/UI/sticker.png.meta
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eec00a43d22724500800000000000000
-      internalID: 378990857134542062
+<<<<<<<< HEAD:Assets/Prefabs/UI/JumpButton.png.meta
+      spriteID: 4e0e31f41a6bc4e70800000000000000
+      internalID: 9100849750941622500
+========
+      spriteID: 249f62763e70271a0800000000000000
+      internalID: -6813374612988561086
+>>>>>>>> trunk:Assets/Prefabs/UI/sticker.png.meta
       vertices: []
       indices: 
       edges: []
@@ -125,7 +149,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 09a7fb1eb4b6d274a80d2d5e5ba5cbcc
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +159,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite_Tree_0: 378990857134542062
+<<<<<<<< HEAD:Assets/Prefabs/UI/JumpButton.png.meta
+      JumpButton_0: 9100849750941622500
+========
+      sticker_0: -6813374612988561086
+>>>>>>>> trunk:Assets/Prefabs/UI/sticker.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
