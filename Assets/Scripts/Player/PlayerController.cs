@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     public float baseHorizontalMult = 0.4f;
     public float timerMultiplier = 0.01f;
     private bool b_sliding = false;
-    private float jumpDuration = 0.0f; // Needs to be linked to anim length
+    private float jumpDuration = 1.5f; // Needs to be linked to anim length
     private bool b_isJumping = false;
     private bool b_canJump = true;
     private bool b_avoidableObstacle = false;
