@@ -30,7 +30,10 @@ public class PlayerController : MonoBehaviour
     public float baseHorizontalMult = 0.4f;
     public float timerMultiplier = 0.01f;
     private bool b_sliding = false;
-    private bool b_jumping = false;
+    private float jumpDuration = 0.0f; // Needs to be linked to anim length
+    private bool b_isJumping = false;
+    private bool b_canJump = true;
+    private bool b_avoidableObstacle = false;
     private float iceBoost = 2.5f;
     private bool b_wipeout = false;
     private bool b_activeBoost = false;
@@ -135,14 +138,25 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        jumpBtnInput = context.ReadValue<float>();
-        Debug.Log("Jump");
-
-        if(!b_jumping)
+        if(context.performed && b_canJump)
         {
-            b_jumping = true;
+            StartCoroutine(JumpCoroutine());   
         }
+        
+    }
 
+    private IEnumerator JumpCoroutine()
+    {
+        Physics2D.IgnoreLayerCollision(3, 6, true);
+        b_canJump = false;
+        b_isJumping = true;
+
+        yield return new WaitForSeconds(jumpDuration);
+
+        b_isJumping = false;
+        b_canJump = true;
+        b_avoidableObstacle = false;
+        Physics2D.IgnoreLayerCollision(3, 6, false);
     }
 
     // No check to stop player from infinite boost
@@ -231,7 +245,7 @@ public class PlayerController : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Rock"))
         {
-            Wipeout();
+            //Wipeout();
         }
         else if(other.gameObject.CompareTag("Tree"))
         {
@@ -250,14 +264,7 @@ public class PlayerController : MonoBehaviour
         }
         else if(other.gameObject.CompareTag("Rock"))
         {
-            if(b_jumping)
-            {
-                Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
-                Destroy(rb);
-                BoxCollider2D boxColl = other.GetComponent<BoxCollider2D>();
-                Destroy(boxColl);
-            }
-            
+            b_avoidableObstacle = true;
         }
     }
 
@@ -340,13 +347,33 @@ public class PlayerController : MonoBehaviour
         b_sliding = p_slip;
     }
 
-    public bool get_Jumping()
+    public bool get_IsJumping()
     {
-        return b_jumping;
+        return b_isJumping;
     }
 
-    public void set_jumping(bool p_jump)
+    public void set_IsJumping(bool p_jump)
     {
-        b_jumping = p_jump;
+        b_isJumping = p_jump;
+    }
+
+    public bool get_CanJump()
+    {
+        return b_canJump;
+    }
+
+    public void set_CanJump(bool p_jump)
+    {
+        b_canJump = p_jump;
+    }
+
+    public bool get_AvoidableObstacle()
+    {
+        return b_avoidableObstacle;
+    }
+
+    public void set_AvoidableObstacle(bool p_avoid)
+    {
+        b_avoidableObstacle = p_avoid;
     }
 }
