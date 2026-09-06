@@ -95,6 +95,7 @@ public class PlayerController : MonoBehaviour
         CalcHorizontalVelocity();
         CalcPlayerScore();
 
+
         //pcRigidBody.linearVelocityY = verticalVelocity;
         //pcRigidBody.linearVelocityX = moveInput.x * horizontalVelocity;
         // Alpine Ski Recreation code below  
