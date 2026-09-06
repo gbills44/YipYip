@@ -146,6 +146,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1675862736}
+    - target: {fileID: 3037784555781953165, guid: 9a164865890961ec18fa1170125ce08e, type: 3}
+      propertyPath: spawnOriginDistance
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4939579538833360588, guid: 9a164865890961ec18fa1170125ce08e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.93848
@@ -238,7 +242,7 @@ MonoBehaviour:
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 4, z: 0}
-  Damping: {x: 1, y: 1, z: 1}
+  Damping: {x: 1, y: 0, z: 1}
   Lookahead:
     Enabled: 0
     Time: 0
@@ -553,6 +557,22 @@ PrefabInstance:
       propertyPath: gameTimer
       value: 
       objectReference: {fileID: 260418099}
+    - target: {fileID: 2194681033290616118, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
+      propertyPath: baseVelocity
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2194681033290616118, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
+      propertyPath: baseExponential
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2194681033290616118, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
+      propertyPath: baseVerticalMult
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2194681033290616118, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
+      propertyPath: baseHorizontalMult
+      value: 0.55
+      objectReference: {fileID: 0}
     - target: {fileID: 3935591396674174871, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -696,6 +716,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1675862736}
+    - target: {fileID: 3037784555781953165, guid: 81fbddc42beb0c2b6b38e744530d97f9, type: 3}
+      propertyPath: spawnOriginDistance
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037784555781953165, guid: 81fbddc42beb0c2b6b38e744530d97f9, type: 3}
+      propertyPath: obstacleSpawnDistanceMax
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037784555781953165, guid: 81fbddc42beb0c2b6b38e744530d97f9, type: 3}
+      propertyPath: obstacleSpawnDistanceMin
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4939579538833360588, guid: 81fbddc42beb0c2b6b38e744530d97f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.93848
