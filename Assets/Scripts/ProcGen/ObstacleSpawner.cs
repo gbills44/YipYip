@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using UnityEditor;
 using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
@@ -8,11 +9,12 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameTimer timer;
 
+    // based on map width
     private int spawnRangeMinX = -10;
     private int spawnRangeMaxX = 10;
-    private int distanceUntilObstacleSpawn;
-    private float lastSpawnPoint = 0.0f;
-    public float obstacleSpawnDistance = 5.0f;
+    private UnityEngine.Vector3 lastSpawnPoint = new UnityEngine.Vector3(0.0f, 0.0f, 0.0f);
+    public float obstacleSpawnDistanceMin = 5.0f;
+    public float obstacleSpawnDistanceMax = 6.0f;
     public int numObstacles = 1;
     public float spawnTimeDelay = 0.0f;
     public float spawnOriginDistance = 28.0f;
@@ -37,45 +39,67 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void SpawnLoop()
     {
-        /*
-        distanceUntilObstacleSpawn = MathF.Floor(player.transform.position.y);
 
-        if(distanceUntilObstacleSpawn >= obstacleSpawnDistance)
+        if((lastSpawnPoint.y + obstacleSpawnDistanceMin) <= player.transform.position.y)
         {
             for(int i = 0; i < numObstacles; i++)
             {
-                Spawn();
+                float spawnPoint = Random.Range(obstacleSpawnDistanceMin, obstacleSpawnDistanceMax);
+                //Spawn(spawnPoint);
+                SpawnPrefab();
             }
-            distanceUntilObstacleSpawn = 0.0f;
-            lastSpawnPoint = player.transform.position.y;
-        }
-        */
-
-        // I want to check if player has moved at least 5.0f blocks since last spawn
-        if((lastSpawnPoint + obstacleSpawnDistance) <= player.transform.position.y)
-        {
-            for(int i = 0; i < numObstacles; i++)
-            {
-                Spawn();
-            }
-            lastSpawnPoint = player.transform.position.y;
+            lastSpawnPoint.y = player.transform.position.y;
         }
 
     }
 
-    private void Spawn()
+    private void SpawnPrefab()
     {
-        int spawnX = Random.Range(spawnRangeMinX, spawnRangeMaxX);
+        int spawnX = 0;
+
+        do
+        {
+            spawnX = Random.Range(spawnRangeMinX, spawnRangeMaxX);
+
+        } while (spawnX == lastSpawnPoint.x);
+
+        float spawnY = player.transform.position.y + spawnOriginDistance;
+        float spawnZ = 0.0f;
+        UnityEngine.Vector3 spawnLocation = new UnityEngine.Vector3 (spawnX, spawnY, spawnZ);
+        GameObject spawnedObstacle = PrefabUtility.InstantiatePrefab(obstaclePrefab) as GameObject;
+        spawnedObstacle.transform.position = spawnLocation;
+        UnityEngine.Debug.Log("SO-ID: " + spawnedObstacle.GetInstanceID());
+        DestroyDelay(ref spawnedObstacle);
+    }
+
+    // Deprecated spawn function
+/*
+    private void Spawn(float p_spawnPoint)
+    { 
+        int spawnX = 0;
+        
+        do
+        {
+            spawnX = Random.Range(spawnRangeMinX, spawnRangeMaxX);
+
+        } while (spawnX == lastSpawnPoint.x);
+
         float spawnY = player.transform.position.y + spawnOriginDistance;
         float spawnZ = 0;
         UnityEngine.Vector3 spawnLocation = new UnityEngine.Vector3 (spawnX, spawnY, spawnZ);
         GameObject spawnedObstacle = Instantiate(obstaclePrefab, spawnLocation, Quaternion.identity);
-
-        //DestroyDelay(spawnedObstacle);
+        spawnedObstacle.transform.position = spawnLocation;
+        DestroyDelay(ref spawnedObstacle);
     }
+    */
 
-    private void DestroyDelay(GameObject p_obstacle)
+    private void DestroyDelay(ref UnityEngine.GameObject p_obstacle)
     {
+        UnityEngine.Debug.Log("Destroy Delay");
+        if(p_obstacle != null)
+        {
+            UnityEngine.Debug.Log("p_obstacle non null");
+        }
         /*
         if(p_obstacle != null)
         {
@@ -90,5 +114,6 @@ public class ObstacleSpawner : MonoBehaviour
             } while (p_obstacle != null);
         }
         */
+        
     }
 }

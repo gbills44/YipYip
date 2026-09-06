@@ -14,6 +14,8 @@ namespace DK.UI
         [SerializeField] private Sprite onSprite;
         [SerializeField] private Sprite offSprite;
 
+        [Header("Visibility Settings")]
+        [SerializeField] private GameObject objectToHide;
 
         private void OnEnable()
         {
@@ -32,10 +34,20 @@ namespace DK.UI
             if (toggleValue)
             {
                 targetImage.sprite = onSprite;
+
+                if (objectToHide != null)
+                {
+                    objectToHide.SetActive(false);
+                }
             }
             else
             {
                 targetImage.sprite = offSprite;
+
+                if (objectToHide != null)
+                {
+                    objectToHide.SetActive(true);
+                }
             }
         }
 

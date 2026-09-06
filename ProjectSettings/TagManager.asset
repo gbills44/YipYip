@@ -7,14 +7,16 @@ TagManager:
   - Rock
   - Tree
   - IceCollider
+  - RockBaseObject
+  - PlayerDespawnCollider
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - AvoidObstacle
   - 
   - 
   - 
@@ -49,6 +51,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 825236173
+    locked: 0
+  - name: MovingObstacles
+    uniqueID: 865454259
     locked: 0
   - name: Rocks
     uniqueID: 2235586055
