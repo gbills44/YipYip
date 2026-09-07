@@ -83,6 +83,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        animator.SetBool("isJumping", b_isJumping);
+
         // Wait 1 second before start moving
         if (!canMove)
         {
