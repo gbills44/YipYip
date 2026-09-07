@@ -58,6 +58,14 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool canMove = false;
 
+    //SFX
+    public AudioSource audioSource;
+    public AudioClip SFX_Impact_Tree;
+    public AudioClip SFX_Impact_Rock;
+    public AudioClip SFX_Player_Wipeout;
+    public AudioClip SFX_Player_Jump;
+    public AudioClip SFX_Player_Slide;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -144,6 +152,10 @@ public class PlayerController : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
+        if (context.performed)
+        {
+            audioSource.PlayOneShot(SFX_Player_Slide, 0.2f); //Play Slide Audio
+        }
         moveInput = context.ReadValue<Vector2>();
     }
 
@@ -151,6 +163,7 @@ public class PlayerController : MonoBehaviour
     {
         if(context.performed && b_canJump)
         {
+            audioSource.PlayOneShot(SFX_Player_Jump); //Play Jump Audio
             StartCoroutine(JumpCoroutine());   
         }
         
@@ -261,6 +274,10 @@ public class PlayerController : MonoBehaviour
         alpineSkiVelocity_x = 0;
         animator.SetTrigger("GameOver");
         GameOverAnimation.SetActive(true);
+
+        audioSource.PlayOneShot(SFX_Player_Wipeout);//Play Wipeout Audio
+        FindObjectOfType<BGMPlayer>().StopBGM();
+
         Debug.Log("Wipeout");
         b_wipeout = true;
 
@@ -272,10 +289,12 @@ public class PlayerController : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Rock"))
         {
-            //Wipeout();
+            audioSource.PlayOneShot(SFX_Impact_Rock);
+            Wipeout();
         }
         else if(other.gameObject.CompareTag("Tree"))
         {
+            audioSource.PlayOneShot(SFX_Impact_Tree);
             Wipeout();
         }
     }
