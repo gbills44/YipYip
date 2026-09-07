@@ -1711,6 +1711,7 @@ GameObject:
   - component: {fileID: 745173607}
   - component: {fileID: 745173606}
   - component: {fileID: 745173605}
+  - component: {fileID: 745173608}
   m_Layer: 5
   m_Name: Leaderboard_Button
   m_TagString: Untagged
@@ -1781,7 +1782,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 745173606}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 745173608}
+        m_TargetAssemblyTypeName: MenuNavigation, Assembly-CSharp
+        m_MethodName: ToLeaderboard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &745173606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1820,6 +1833,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745173603}
   m_CullTransparentMesh: 1
+--- !u!114 &745173608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745173603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df0585abeab5d24d857e86f15596173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuNavigation
 --- !u!1 &776469523
 GameObject:
   m_ObjectHideFlags: 0
