@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: 7ebd4c8e74680e24e999ff1db3c83f10
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5488441453900475430
+    second: title_husky_ani -large_0
+  - first:
+      213: 843350372039369505
+    second: title_husky_ani -large_1
+  - first:
+      213: -8456273056006114420
+    second: title_husky_ani -large_2
+  - first:
+      213: 6840233570350873009
+    second: title_husky_ani -large_3
+  - first:
+      213: 2380820178742629936
+    second: title_husky_ani -large_4
+  - first:
+      213: 5235498285557092741
+    second: title_husky_ani -large_5
+  - first:
+      213: 8131234419146119361
+    second: title_husky_ani -large_6
+  - first:
+      213: 1325135532808782374
+    second: title_husky_ani -large_7
+  - first:
+      213: -748192210270808036
+    second: title_husky_ani -large_8
+  - first:
+      213: -5893823499429416302
+    second: title_husky_ani -large_9
+  - first:
+      213: 2872400714059198608
+    second: title_husky_ani -large_10
+  - first:
+      213: -4708332143396760416
+    second: title_husky_ani -large_11
+  - first:
+      213: -6926811138372375252
+    second: title_husky_ani -large_12
+  - first:
+      213: -2478709074875317052
+    second: title_husky_ani -large_13
+  - first:
+      213: 3625131306957958142
+    second: title_husky_ani -large_14
+  - first:
+      213: 306158184617902322
+    second: title_husky_ani -large_15
+  - first:
+      213: -732006825756936410
+    second: title_husky_ani -large_16
+  - first:
+      213: -8560279130380912774
+    second: title_husky_ani -large_17
+  - first:
+      213: 5792922167758792921
+    second: title_husky_ani -large_18
+  - first:
+      213: -5567673231921092042
+    second: title_husky_ani -large_19
+  - first:
+      213: -3004987547320010068
+    second: title_husky_ani -large_20
+  - first:
+      213: -6285735526358982634
+    second: title_husky_ani -large_21
+  - first:
+      213: -5819032651584998894
+    second: title_husky_ani -large_22
+  - first:
+      213: -2294903180585862188
+    second: title_husky_ani -large_23
+  - first:
+      213: 7204790808176498183
+    second: title_husky_ani -large_24
+  - first:
+      213: -3066463215644822720
+    second: title_husky_ani -large_25
+  - first:
+      213: -3269538289317776804
+    second: title_husky_ani -large_26
+  - first:
+      213: -494161166239057516
+    second: title_husky_ani -large_27
+  - first:
+      213: 4845017465139405452
+    second: title_husky_ani -large_28
+  - first:
+      213: 7349387618133366555
+    second: title_husky_ani -large_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: title_husky_ani -large_0
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 3329
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad3dbb1a39325d3b0800000000000000
+      internalID: -5488441453900475430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_1
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 3329
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 123a992f1be24bb00800000000000000
+      internalID: 843350372039369505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_2
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 3329
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c837c05757845aa80800000000000000
+      internalID: -8456273056006114420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_3
+      rect:
+        serializedVersion: 2
+        x: 3989
+        y: 3329
+        width: 932
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b9377de0346dee50800000000000000
+      internalID: 6840233570350873009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_4
+      rect:
+        serializedVersion: 2
+        x: 5269
+        y: 3329
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0365904a65f5a0120800000000000000
+      internalID: 2380820178742629936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_5
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 2689
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5811ccca3f938a840800000000000000
+      internalID: 5235498285557092741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_6
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2679
+        width: 912
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c852a28f92f7d070800000000000000
+      internalID: 8131234419146119361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_7
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 2679
+        width: 922
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 622c0580fb3d36210800000000000000
+      internalID: 1325135532808782374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_8
+      rect:
+        serializedVersion: 2
+        x: 3999
+        y: 2679
+        width: 912
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18181b1623ed95f0800000000000000
+      internalID: -748192210270808036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_9
+      rect:
+        serializedVersion: 2
+        x: 5279
+        y: 2689
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 292f8ab01cee43ea0800000000000000
+      internalID: -5893823499429416302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_10
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 2049
+        width: 932
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 090b3161b31dcd720800000000000000
+      internalID: 2872400714059198608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_11
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 2049
+        width: 932
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a458448cd4a8aeb0800000000000000
+      internalID: -4708332143396760416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_12
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 2049
+        width: 932
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d681f28f50fdf90800000000000000
+      internalID: -6926811138372375252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_13
+      rect:
+        serializedVersion: 2
+        x: 3989
+        y: 2049
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4058aaa3bd99dd0800000000000000
+      internalID: -2478709074875317052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_14
+      rect:
+        serializedVersion: 2
+        x: 5269
+        y: 2049
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb606787bd0f4230800000000000000
+      internalID: 3625131306957958142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_15
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1409
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f08a3f2f31bf3400800000000000000
+      internalID: 306158184617902322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_16
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 1409
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627b8999ba367d5f0800000000000000
+      internalID: -732006825756936410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_17
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 1409
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77b4773c77c33980800000000000000
+      internalID: -8560279130380912774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_18
+      rect:
+        serializedVersion: 2
+        x: 3989
+        y: 1409
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d8afb4f408946050800000000000000
+      internalID: 5792922167758792921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_19
+      rect:
+        serializedVersion: 2
+        x: 5269
+        y: 1409
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a64e1c1b6abb2b0800000000000000
+      internalID: -5567673231921092042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_20
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 769
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caab48f2fb32c46d0800000000000000
+      internalID: -3004987547320010068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_21
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 769
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 610e15f87d494c8a0800000000000000
+      internalID: -6285735526358982634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_22
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 769
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21270e942a4ae3fa0800000000000000
+      internalID: -5819032651584998894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_23
+      rect:
+        serializedVersion: 2
+        x: 3989
+        y: 769
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dbf34757bdd620e0800000000000000
+      internalID: -2294903180585862188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_24
+      rect:
+        serializedVersion: 2
+        x: 5269
+        y: 769
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7061c52411f8cf360800000000000000
+      internalID: 7204790808176498183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_25
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 129
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04330b2c3fbb175d0800000000000000
+      internalID: -3066463215644822720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_26
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 129
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c52fca5af3440a2d0800000000000000
+      internalID: -3269538289317776804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_27
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 129
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 499378899036429f0800000000000000
+      internalID: -494161166239057516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_28
+      rect:
+        serializedVersion: 2
+        x: 3989
+        y: 129
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c82a23ce6b5fc3340800000000000000
+      internalID: 4845017465139405452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title_husky_ani -large_29
+      rect:
+        serializedVersion: 2
+        x: 5269
+        y: 129
+        width: 922
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b175e7799154ef560800000000000000
+      internalID: 7349387618133366555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      title_husky_ani -large_0: -5488441453900475430
+      title_husky_ani -large_1: 843350372039369505
+      title_husky_ani -large_10: 2872400714059198608
+      title_husky_ani -large_11: -4708332143396760416
+      title_husky_ani -large_12: -6926811138372375252
+      title_husky_ani -large_13: -2478709074875317052
+      title_husky_ani -large_14: 3625131306957958142
+      title_husky_ani -large_15: 306158184617902322
+      title_husky_ani -large_16: -732006825756936410
+      title_husky_ani -large_17: -8560279130380912774
+      title_husky_ani -large_18: 5792922167758792921
+      title_husky_ani -large_19: -5567673231921092042
+      title_husky_ani -large_2: -8456273056006114420
+      title_husky_ani -large_20: -3004987547320010068
+      title_husky_ani -large_21: -6285735526358982634
+      title_husky_ani -large_22: -5819032651584998894
+      title_husky_ani -large_23: -2294903180585862188
+      title_husky_ani -large_24: 7204790808176498183
+      title_husky_ani -large_25: -3066463215644822720
+      title_husky_ani -large_26: -3269538289317776804
+      title_husky_ani -large_27: -494161166239057516
+      title_husky_ani -large_28: 4845017465139405452
+      title_husky_ani -large_29: 7349387618133366555
+      title_husky_ani -large_3: 6840233570350873009
+      title_husky_ani -large_4: 2380820178742629936
+      title_husky_ani -large_5: 5235498285557092741
+      title_husky_ani -large_6: 8131234419146119361
+      title_husky_ani -large_7: 1325135532808782374
+      title_husky_ani -large_8: -748192210270808036
+      title_husky_ani -large_9: -5893823499429416302
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
