@@ -12,22 +12,32 @@ namespace DK.UI
         [Header("Timing")]
         [SerializeField] private float delayInSeconds = 2.5f;
 
+        private static bool hasSeenIntro = false;
+
         private void Start()
         {
-            // Hide the menu immediately when the scene loads
-            if (menuCanvas != null)
+            if (!hasSeenIntro)
             {
-                menuCanvas.SetActive(false);
-                StartCoroutine(ShowMenuAfterDelay());
+                if (menuCanvas != null)
+                {
+                    menuCanvas.SetActive(false);
+                    StartCoroutine(ShowMenuAfterDelay());
+                }
+                hasSeenIntro = true;
+            }
+            else
+            {
+                if (menuCanvas != null)
+                {
+                    menuCanvas.SetActive(true);
+                }
             }
         }
 
         private IEnumerator ShowMenuAfterDelay()
         {
-            // Pause this script for the specified amount of time
             yield return new WaitForSeconds(delayInSeconds);
 
-            // Turns the menu back on
             if (menuCanvas != null)
             {
                 menuCanvas.SetActive(true);

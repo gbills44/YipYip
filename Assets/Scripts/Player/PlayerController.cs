@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InputActionAsset voiceIA;
     [SerializeField] private InputActionAsset buttonIA;
     [SerializeField] private GameObject GameOverAnimation;
+    [SerializeField] private GameObject gameOverPanel;
 
     private Rigidbody2D pcRigidBody;
     private PlayerInput playerInput;
@@ -281,6 +282,10 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Wipeout");
         b_wipeout = true;
 
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+        }
         // Call Game End
     }
 
