@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     //private float movementSpeed = 5.0f;
     [SerializeField] private InputActionAsset voiceIA;
     [SerializeField] private InputActionAsset buttonIA;
+    [SerializeField] private GameObject GameOverAnimation;
 
     private Rigidbody2D pcRigidBody;
     private PlayerInput playerInput;
@@ -64,6 +65,7 @@ public class PlayerController : MonoBehaviour
     {
         //MoveAction.Enable();
         animator = GetComponent<Animator>();
+        GameOverAnimation.SetActive(false);
         pcRigidBody = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
         verticalVelocity = baseVelocity + baseVerticalMult;
@@ -258,6 +260,7 @@ public class PlayerController : MonoBehaviour
         alpineSkiVelocity_y = 0;
         alpineSkiVelocity_x = 0;
         animator.SetTrigger("GameOver");
+        GameOverAnimation.SetActive(true);
         Debug.Log("Wipeout");
         b_wipeout = true;
 
