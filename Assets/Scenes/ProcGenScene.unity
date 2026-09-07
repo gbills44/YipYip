@@ -147,6 +147,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1675862736}
     - target: {fileID: 3037784555781953165, guid: 9a164865890961ec18fa1170125ce08e, type: 3}
+      propertyPath: obstaclePrefab
+      value: 
+      objectReference: {fileID: 924380196069471665, guid: f7b391f7d1113874b907364e33b4a366, type: 3}
+    - target: {fileID: 3037784555781953165, guid: 9a164865890961ec18fa1170125ce08e, type: 3}
       propertyPath: spawnOriginDistance
       value: 15
       objectReference: {fileID: 0}

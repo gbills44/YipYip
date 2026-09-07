@@ -9,17 +9,15 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameTimer timer;
 
-    // based on map width
-    private int spawnRangeMinX = -10;
-    private int spawnRangeMaxX = 10;
+    // Obstacle spawn vars
+    private int spawnRangeMinX = -10; // based on map width
+    private int spawnRangeMaxX = 10; // based on map width
     private UnityEngine.Vector3 lastSpawnPoint = new UnityEngine.Vector3(0.0f, 0.0f, 0.0f);
     public float obstacleSpawnDistanceMin = 5.0f;
     public float obstacleSpawnDistanceMax = 6.0f;
     public int numObstacles = 1;
     public float spawnTimeDelay = 0.0f;
     public float spawnOriginDistance = 28.0f;
-    
-
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
