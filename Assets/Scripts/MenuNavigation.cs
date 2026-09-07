@@ -7,4 +7,9 @@ public class MenuNavigation : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void ToLeaderboard()
+    {
+        SceneManager.LoadScene(2);
+    }
 }
