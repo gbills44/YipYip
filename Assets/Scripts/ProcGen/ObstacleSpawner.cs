@@ -6,6 +6,7 @@ public class ObstacleSpawner : MonoBehaviour
 {
 
     [SerializeField] private GameObject obstaclePrefab;
+    [SerializeField] private GameObject warningPrefab;
     [SerializeField] private GameObject player;
     [SerializeField] private GameTimer timer;
 
@@ -19,7 +20,8 @@ public class ObstacleSpawner : MonoBehaviour
     public float spawnTimeDelay = 0.0f;
     public float spawnOriginDistance = 28.0f;
     
-
+    public float warningOffsetY = -10.0f;
+    public float warningOffsetX = -1.0f;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -68,8 +70,21 @@ public class ObstacleSpawner : MonoBehaviour
         UnityEngine.Vector3 spawnLocation = new UnityEngine.Vector3 (spawnX, spawnY, spawnZ);
         GameObject spawnedObstacle = PrefabUtility.InstantiatePrefab(obstaclePrefab) as GameObject;
         spawnedObstacle.transform.position = spawnLocation;
+
+        SpawnWarningPrefab(spawnLocation);
+
         UnityEngine.Debug.Log("SO-ID: " + spawnedObstacle.GetInstanceID());
         DestroyDelay(ref spawnedObstacle);
+    }
+
+    private void SpawnWarningPrefab(UnityEngine.Vector3 p_location)
+    {
+        UnityEngine.Vector3 spawnLocation = p_location;
+        spawnLocation.y += warningOffsetY;
+        spawnLocation.x += warningOffsetX;
+
+        GameObject spawnedWarning = Instantiate(warningPrefab) as GameObject;
+        spawnedWarning.transform.position = spawnLocation;
     }
 
     // Deprecated spawn function

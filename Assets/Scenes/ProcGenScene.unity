@@ -5348,6 +5348,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1675862736}
     - target: {fileID: 3037784555781953165, guid: 9a164865890961ec18fa1170125ce08e, type: 3}
+      propertyPath: warningPrefab
+      value: 
+      objectReference: {fileID: 2130891779069531252, guid: 3e302ff761acdf74583f4a4d699a1973, type: 3}
+    - target: {fileID: 3037784555781953165, guid: 9a164865890961ec18fa1170125ce08e, type: 3}
       propertyPath: obstaclePrefab
       value: 
       objectReference: {fileID: 1773169311502000533, guid: 22651f51ec972ea8187e73e26903dd3b, type: 3}
@@ -6357,6 +6361,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1675862736}
     - target: {fileID: 3037784555781953165, guid: d2806fa05b1d0e066bb2274469fb82a5, type: 3}
+      propertyPath: warningPrefab
+      value: 
+      objectReference: {fileID: 2130891779069531252, guid: 3e302ff761acdf74583f4a4d699a1973, type: 3}
+    - target: {fileID: 3037784555781953165, guid: d2806fa05b1d0e066bb2274469fb82a5, type: 3}
       propertyPath: obstaclePrefab
       value: 
       objectReference: {fileID: 8830504542541824318, guid: 8eb8e554dd7c05c4fbf973a726e640e5, type: 3}
@@ -6861,7 +6869,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.87786865, y: -0.000061035156}
+  m_AnchoredPosition: {x: 0.8779297, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693724795
@@ -6984,6 +6992,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1675862736}
+    - target: {fileID: 3037784555781953165, guid: f5fb07afb87c53b2d9194bdd731c6a32, type: 3}
+      propertyPath: warningPrefab
+      value: 
+      objectReference: {fileID: 2130891779069531252, guid: 3e302ff761acdf74583f4a4d699a1973, type: 3}
     - target: {fileID: 3037784555781953165, guid: f5fb07afb87c53b2d9194bdd731c6a32, type: 3}
       propertyPath: obstaclePrefab
       value: 
@@ -7174,6 +7186,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1675862736}
+    - target: {fileID: 3037784555781953165, guid: 81fbddc42beb0c2b6b38e744530d97f9, type: 3}
+      propertyPath: warningPrefab
+      value: 
+      objectReference: {fileID: 2130891779069531252, guid: 3e302ff761acdf74583f4a4d699a1973, type: 3}
     - target: {fileID: 3037784555781953165, guid: 81fbddc42beb0c2b6b38e744530d97f9, type: 3}
       propertyPath: spawnOriginDistance
       value: 22
