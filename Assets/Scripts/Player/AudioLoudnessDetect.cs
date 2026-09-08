@@ -40,6 +40,9 @@ public class AudioLoudnessDetect : MonoBehaviour
 
         // Need extreme(s) check
         meanLoudness = totalLoudness / sampleWindow;
+
+        Debug.Log("Voice Input: " + meanLoudness);
+
         return meanLoudness;
     }
 

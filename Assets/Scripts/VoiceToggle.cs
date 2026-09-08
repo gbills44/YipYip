@@ -25,11 +25,13 @@ namespace DK.UI
             UpdateSprite(toggle.isOn);
 
             toggle.onValueChanged.AddListener(UpdateSprite);
+            PlayerPrefs.SetInt("Voice", 1);
         }
 
         private void OnDisable()
         {
             toggle.onValueChanged.RemoveListener(UpdateSprite);
+            PlayerPrefs.SetInt("Voice", 0);
         }
 
         private void UpdateSprite(bool toggleValue)
@@ -63,6 +65,18 @@ namespace DK.UI
         public void ToggleValueThroughScript()
         {
             toggle.isOn = !toggle.isOn;
+        }
+
+        public bool Get_VoiceToggleStatus()
+        {
+            if(toggle.isOn)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
