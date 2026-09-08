@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     //private float movementSpeed = 5.0f;
     [SerializeField] private InputActionAsset voiceIA;
     [SerializeField] private InputActionAsset buttonIA;
+    [SerializeField] private GameObject GameOverAnimation;
+    [SerializeField] private GameOverManager gameOverManager;
+
 
     private Rigidbody2D pcRigidBody;
     private PlayerInput playerInput;
@@ -49,39 +52,59 @@ public class PlayerController : MonoBehaviour
     private bool b_activeBoost = false;
 
     // Alpine Ski Recreation vars below
-    /*
+    
     public float alpineSkiVelocity_y = 5.0f;
     public float alpineSkiVelocity_x = 2.5f;
     public float alpineSkiBoost = 2.5f;
     public float alpineBoostDuration = 1.0f;
-    */
+    private Animator animator;
+    private bool canMove = false;
+
+    //SFX
+    public AudioSource audioSource;
+    public AudioClip SFX_Impact_Tree;
+    public AudioClip SFX_Impact_Rock;
+    public AudioClip SFX_Player_Wipeout;
+    public AudioClip SFX_Player_Jump;
+    public AudioClip SFX_Player_Slide;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //MoveAction.Enable();
+        animator = GetComponent<Animator>();
+        GameOverAnimation.SetActive(false);
         pcRigidBody = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
         verticalVelocity = baseVelocity + baseVerticalMult;
         horizontalVelocity = verticalVelocity * baseHorizontalMult;
         timerMultiplier = gameTimer.Get_CurrentTime();
+        Invoke(nameof(StartMoving), 1f);
         b_wipeout = false;
 
-        if(b_voiceToggle)
-        {
-            playerInput.actions = voiceIA;
-        }
-        else
-        {
-            playerInput.actions = buttonIA;
-        }
-
     }
+
+    private void StartMoving()
+    {
+        canMove = true;
+    }
+
 
     // Update is called once per frame
     void Update()
     {
+
+        animator.SetBool("isJumping", b_isJumping);
+
+        // Wait 1 second before start moving
+        if (!canMove)
+        {
+            pcRigidBody.linearVelocity = Vector2.zero;
+            return;
+        }
+
         //Vector2 move = MoveAction.ReadValue<Vector2>();
         //Debug.Log(move);
         //Vector2 position = (Vector2)transform.position + move * 0.01f;
@@ -131,6 +154,10 @@ public class PlayerController : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
+        if (context.performed)
+        {
+            audioSource.PlayOneShot(SFX_Player_Slide, 0.2f); //Play Slide Audio
+        }
         moveInput = context.ReadValue<Vector2>();
     }
 
@@ -138,6 +165,7 @@ public class PlayerController : MonoBehaviour
     {
         if(context.performed && b_canJump)
         {
+            audioSource.PlayOneShot(SFX_Player_Jump); //Play Jump Audio
             StartCoroutine(JumpCoroutine());   
         }
         
@@ -244,11 +272,21 @@ public class PlayerController : MonoBehaviour
     {
         pcRigidBody.linearVelocityX = 0;
         pcRigidBody.linearVelocityY = 0;
-        //alpineSkiVelocity_y = 0;
-        //alpineSkiVelocity_x = 0;
+        alpineSkiVelocity_y = 0;
+        alpineSkiVelocity_x = 0;
+        animator.SetTrigger("GameOver");
+        GameOverAnimation.SetActive(true);
+
+        audioSource.PlayOneShot(SFX_Player_Wipeout);//Play Wipeout Audio
+        FindObjectOfType<BGMPlayer>().StopBGM();
+
         Debug.Log("Wipeout");
         b_wipeout = true;
 
+        if (gameOverManager != null)
+        {
+            gameOverManager.TriggerGameOverUI(); ;
+        }
         // Call Game End
     }
 
@@ -257,10 +295,12 @@ public class PlayerController : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Rock"))
         {
-            //Wipeout();
+            audioSource.PlayOneShot(SFX_Impact_Rock);
+            Wipeout();
         }
         else if(other.gameObject.CompareTag("Tree"))
         {
+            audioSource.PlayOneShot(SFX_Impact_Tree);
             Wipeout();
         }
     }

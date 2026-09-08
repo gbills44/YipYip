@@ -1,36 +1,73 @@
+using System.Collections; // Required for Coroutines
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // Added this namespace to manage scenes
+using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
+    [Header("New Highscore UI")]
+    public GameObject highscorePanel;
     public TMP_InputField nameInputField;
     public Button submitButton;
-    public PlayerController playerController;
 
-    // Type the exact name of your leaderboard scene in the Inspector
+    [Header("Standard Game Over UI")]
+    public GameObject standardPanel;
+    public Button restartButton;
+
+    [Header("Background")]
+    public GameObject blackBackground; // Slot for your new black screen
+
+    [Header("References")]
+    public PlayerController playerController;
     public string leaderboardSceneName = "Leaderboard";
 
     private void Start()
     {
         nameInputField.onValueChanged.AddListener(text => nameInputField.text = text.ToUpper());
         submitButton.onClick.AddListener(SubmitScore);
+        restartButton.onClick.AddListener(RestartGame);
+
+        highscorePanel.SetActive(false);
+        standardPanel.SetActive(false);
+        if (blackBackground != null) blackBackground.SetActive(false);
+    }
+
+    public void TriggerGameOverUI()
+    {
+        StartCoroutine(ShowPanelsAfterDelay());
+    }
+
+    private IEnumerator ShowPanelsAfterDelay()
+    {
+        yield return new WaitForSeconds(5f);
+
+        if (blackBackground != null) blackBackground.SetActive(true);
+
+        int finalScore = Mathf.RoundToInt(playerController.get_PlayerScore());
+
+        if (LeaderboardManager.IsNewHighscore(finalScore))
+        {
+            highscorePanel.SetActive(true);
+        }
+        else
+        {
+            standardPanel.SetActive(true);
+        }
     }
 
     private void SubmitScore()
     {
         string playerName = nameInputField.text;
-
-        if (string.IsNullOrEmpty(playerName))
-        {
-            playerName = "AAA";
-        }
+        if (string.IsNullOrEmpty(playerName)) playerName = "AAA";
 
         int finalScore = Mathf.RoundToInt(playerController.get_PlayerScore());
         LeaderboardManager.SubmitNewScore(finalScore, playerName);
-
-        // Load the leaderboard scene instead of turning off the panel
         SceneManager.LoadScene(leaderboardSceneName);
+    }
+
+    private void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

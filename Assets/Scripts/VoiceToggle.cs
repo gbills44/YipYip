@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
 namespace DK.UI
 {
     public class VoiceToggle : MonoBehaviour
@@ -16,6 +15,10 @@ namespace DK.UI
 
         [Header("Visibility Settings")]
         [SerializeField] private GameObject objectToHide;
+
+        [Header("Text Settings")]
+        [SerializeField] private GameObject onTextBox;  
+        [SerializeField] private GameObject offTextBox; 
 
         private void OnEnable()
         {
@@ -39,6 +42,9 @@ namespace DK.UI
                 {
                     objectToHide.SetActive(false);
                 }
+
+                if (onTextBox != null) onTextBox.SetActive(true);
+                if (offTextBox != null) offTextBox.SetActive(false);
             }
             else
             {
@@ -48,6 +54,9 @@ namespace DK.UI
                 {
                     objectToHide.SetActive(true);
                 }
+
+                if (onTextBox != null) onTextBox.SetActive(false);
+                if (offTextBox != null) offTextBox.SetActive(true);
             }
         }
 
