@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3050296758644885145}
   - component: {fileID: 3041874944392775457}
   - component: {fileID: 9017648330532674125}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree
   m_TagString: Tree
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 3186845649024011921}
   - component: {fileID: 916458547494849245}
   - component: {fileID: 2093767094251498722}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,8 +171,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 536491397
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1003418203834608185, guid: dcef3e1a91304f642a4a38d7fc3309fb, type: 3}
