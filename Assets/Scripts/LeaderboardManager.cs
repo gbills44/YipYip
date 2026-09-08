@@ -4,6 +4,28 @@ using TMPro;
 
 public class LeaderboardManager : MonoBehaviour
 {
+    public static bool IsNewHighscore(int currentScore)
+    {
+        string jsonString = PlayerPrefs.GetString("highscoreTable");
+        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
+
+        if (highscores == null || highscores.highscoreEntryList.Count < 10)
+        {
+            return true;
+        }
+
+        int lowestScore = int.MaxValue;
+        foreach (HighscoreEntry entry in highscores.highscoreEntryList)
+        {
+            if (entry.score < lowestScore)
+            {
+                lowestScore = entry.score;
+            }
+        }
+
+        return currentScore > lowestScore;
+    }
+
     private Transform entryContainer;
     private Transform entryTemplate;
     private List<Transform> highscoreEntryTransformList;
