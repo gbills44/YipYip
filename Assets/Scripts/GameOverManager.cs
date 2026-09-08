@@ -1,3 +1,4 @@
+using System.Collections; // Required for Coroutines
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -14,6 +15,9 @@ public class GameOverManager : MonoBehaviour
     public GameObject standardPanel;
     public Button restartButton;
 
+    [Header("Background")]
+    public GameObject blackBackground; // Slot for your new black screen
+
     [Header("References")]
     public PlayerController playerController;
     public string leaderboardSceneName = "Leaderboard";
@@ -26,10 +30,20 @@ public class GameOverManager : MonoBehaviour
 
         highscorePanel.SetActive(false);
         standardPanel.SetActive(false);
+        if (blackBackground != null) blackBackground.SetActive(false);
     }
 
     public void TriggerGameOverUI()
     {
+        StartCoroutine(ShowPanelsAfterDelay());
+    }
+
+    private IEnumerator ShowPanelsAfterDelay()
+    {
+        yield return new WaitForSeconds(5f);
+
+        if (blackBackground != null) blackBackground.SetActive(true);
+
         int finalScore = Mathf.RoundToInt(playerController.get_PlayerScore());
 
         if (LeaderboardManager.IsNewHighscore(finalScore))
