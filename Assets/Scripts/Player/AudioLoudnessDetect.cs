@@ -1,3 +1,4 @@
+using NUnit.Framework.Internal;
 using UnityEngine;
 
 public class AudioLoudnessDetect : MonoBehaviour
@@ -15,7 +16,6 @@ public class AudioLoudnessDetect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public float GetLoudnessFromAudioClip(int clipPosition, AudioClip clip)
@@ -40,6 +40,9 @@ public class AudioLoudnessDetect : MonoBehaviour
 
         // Need extreme(s) check
         meanLoudness = totalLoudness / sampleWindow;
+
+        Debug.Log("Voice Input: " + meanLoudness);
+
         return meanLoudness;
     }
 
@@ -47,6 +50,7 @@ public class AudioLoudnessDetect : MonoBehaviour
     {
         string microphoneName = Microphone.devices[0];
         Debug.Log(microphoneName);
+        Debug.Log("Num Mics: " + Microphone.devices.Length);
         micClip = Microphone.Start(microphoneName, true, 20, AudioSettings.outputSampleRate);
     }
 
