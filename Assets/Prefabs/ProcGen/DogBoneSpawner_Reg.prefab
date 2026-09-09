@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4939579538833360588}
   - component: {fileID: 3037784555781953165}
   m_Layer: 0
-  m_Name: FlagSpawner_Reg
+  m_Name: DogBoneSpawner_Reg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4cf25deb575c7eb8bf6131905f9e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
-  obstaclePrefab: {fileID: 8785771002996681437, guid: 44c5396b3ff3ac642ba31698b4168e06, type: 3}
+  obstaclePrefab: {fileID: 7024508790009179125, guid: b144f7ce4ddc867e4af7c9a2641b524d, type: 3}
   player: {fileID: 0}
   timer: {fileID: 0}
   obstacleSpawnDistanceMin: 5

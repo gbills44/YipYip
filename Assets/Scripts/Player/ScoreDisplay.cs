@@ -18,7 +18,8 @@ public class ScoreDisplay : MonoBehaviour
     void Update()
     {
         playerScore = player.get_PlayerScore();
-        scoreText.text = playerScore.ToString();
+        int score = Mathf.FloorToInt(playerScore);
+        scoreText.text = score.ToString();
     }
 
 

@@ -48,7 +48,7 @@ public class AudioLoudnessDetect : MonoBehaviour
 
     public void MicToAudioClip()
     {
-        string microphoneName = Microphone.devices[0];
+        string microphoneName = Microphone.devices[1];
         Debug.Log(microphoneName);
         Debug.Log("Num Mics: " + Microphone.devices.Length);
         micClip = Microphone.Start(microphoneName, true, 20, AudioSettings.outputSampleRate);
@@ -56,6 +56,6 @@ public class AudioLoudnessDetect : MonoBehaviour
 
     public float MicrophoneLoudness()
     {
-        return GetLoudnessFromAudioClip(Microphone.GetPosition(Microphone.devices[0]), micClip);
+        return GetLoudnessFromAudioClip(Microphone.GetPosition(Microphone.devices[1]), micClip);
     }
 }
