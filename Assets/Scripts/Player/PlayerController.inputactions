@@ -197,7 +197,7 @@
                     "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": ";Keyboard&Mouse;Gamepad;Touch;Joystick",
                     "action": "YipBoost",
                     "isComposite": false,
                     "isPartOfComposite": false
