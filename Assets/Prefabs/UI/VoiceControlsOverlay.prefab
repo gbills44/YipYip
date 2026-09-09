@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 3897218665498794981}
   - component: {fileID: 2731320038045058450}
   - component: {fileID: 1002308497348474557}
+  - component: {fileID: 1677880616592390995}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -314,6 +315,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.OnScreen.OnScreenButton
   m_ControlPath: <Joystick>/trigger
+--- !u!114 &1677880616592390995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3698524566475360010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e2c89ca52a94d4993fc58b0a8e1086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonColorChange
+  cooldownColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  cooldownTime: 2
 --- !u!1 &4339209911268784327
 GameObject:
   m_ObjectHideFlags: 0
