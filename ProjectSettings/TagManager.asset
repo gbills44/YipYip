@@ -9,6 +9,8 @@ TagManager:
   - IceCollider
   - RockBaseObject
   - PlayerDespawnCollider
+  - DogBone
+  - DogBoneRare
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Water
   - UI
   - AvoidObstacle
-  - 
+  - DogBone
   - 
   - 
   - 
@@ -43,6 +45,9 @@ TagManager:
   - 
   - Background
   m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: Background
     uniqueID: 740982879
     locked: 0
