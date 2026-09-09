@@ -6602,6 +6602,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2194681033290616118, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
+      propertyPath: voiceIA
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: e5777f6575819f941afa43b2e5d5f907, type: 3}
+    - target: {fileID: 2194681033290616118, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
       propertyPath: gameTimer
       value: 
       objectReference: {fileID: 260418099}
