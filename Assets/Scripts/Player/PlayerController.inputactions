@@ -193,6 +193,17 @@
                 },
                 {
                     "name": "",
+                    "id": "7d4e6270-69fb-4e6b-9201-1427c24fcdf0",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "YipBoost",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "11d206dd-32a9-4d61-ad02-bacf8b36608a",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -209,6 +220,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Joystick",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "debc7c42-ade4-4915-9c45-6b999be0788d",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
