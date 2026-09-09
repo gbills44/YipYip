@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: 6467763264935764650}
   - component: {fileID: 1716717490431102020}
   - component: {fileID: 950507946536879758}
+  - component: {fileID: 6599482838785673826}
   m_Layer: 5
   m_Name: JumpBtn
   m_TagString: Untagged
@@ -484,6 +485,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.OnScreen.OnScreenButton
   m_ControlPath: <Joystick>/trigger
+--- !u!114 &6599482838785673826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6479079387227778799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e2c89ca52a94d4993fc58b0a8e1086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonColorChange
+  pressedColor: {r: 0.9496855, g: 0.43303263, b: 0.43303263, a: 1}
 --- !u!1 &6673042226266144320
 GameObject:
   m_ObjectHideFlags: 0
