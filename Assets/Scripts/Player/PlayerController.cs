@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
 
     private bool b_sliding = false;
-    private float jumpDuration = 1.5f; // Needs to be linked to anim length
+    public float jumpDuration = 2.25f;
     private bool b_isJumping = false;
     private bool b_canJump = true;
     private bool b_avoidableObstacle = false;
@@ -219,27 +219,53 @@ public class PlayerController : MonoBehaviour
     public void YipBoost(InputAction.CallbackContext context)
     {
         yipBtnInput = context.ReadValue<float>();
-        Debug.Log("YipBoost");
+        Debug.Log("YipBoostButton");
 
         if(!b_activeBoost)
         {
             b_activeBoost = true;
             
-            BoostDelay(gameTimer.Get_CurrentTime());
+            verticalVelocity += boostBaseAdd;
+            StartCoroutine(YipBoostDurationCoroutine());
         }
         
     }
 
     public void YipBoostVoice()
     {
-        Debug.Log("YipBoost");
+        Debug.Log("YipBoostVoice");
 
         if(!b_activeBoost && b_canBoost)
         {
             b_activeBoost = true;
-            
-            BoostDelay(gameTimer.Get_CurrentTime());
+
+            verticalVelocity += boostBaseAdd;
+
+            StartCoroutine(YipBoostDurationCoroutine());
         }
+    }
+
+    private IEnumerator YipBoostDurationCoroutine()
+    {
+        b_activeBoost = true;
+        b_canBoost = false;
+
+        yield return new WaitForSecondsRealtime(boostDuration);
+
+        verticalVelocity -= boostBaseAdd;
+        StartCoroutine(YipBoostCooldownCoroutine());
+    }
+
+    private IEnumerator YipBoostCooldownCoroutine()
+    {
+        b_activeBoost = false;
+        b_canBoost = false;
+
+        yield return new WaitForSecondsRealtime(boostCooldown);
+
+        b_activeBoost = false;
+        b_canBoost = true;
+        verticalVelocity -= boostBaseAdd;
     }
 
     public void DebugSpaceBar(InputAction.CallbackContext context)
