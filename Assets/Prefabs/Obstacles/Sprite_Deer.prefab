@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7609188915677004915}
   - component: {fileID: 1049804201366355931}
   - component: {fileID: 2026394869310250345}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite_Deer
   m_TagString: Tree
   m_Icon: {fileID: 0}
@@ -82,8 +82,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 865454259
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3949927569093654600, guid: 651fa1d67e24b4749a1e9b1b570c2956, type: 3}

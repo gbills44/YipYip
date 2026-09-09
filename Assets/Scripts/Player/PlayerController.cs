@@ -44,13 +44,18 @@ public class PlayerController : MonoBehaviour
 
 
     private bool b_sliding = false;
-    private float jumpDuration = 1.5f; // Needs to be linked to anim length
+    public float jumpDuration = 2.25f;
     private bool b_isJumping = false;
     private bool b_canJump = true;
     private bool b_avoidableObstacle = false;
     private float iceBoost = 2.5f;
     private bool b_wipeout = false;
     private bool b_activeBoost = false;
+    private bool b_canBoost = true;
+
+    public float boostBaseAdd = 4.0f;
+    public float boostDuration = 3.0f;
+    public float boostCooldown = 6.0f;
 
     // Alpine Ski Recreation vars below
     
@@ -106,6 +111,8 @@ public class PlayerController : MonoBehaviour
         {
             playerInput.actions = buttonIA;
         }
+
+        playerInput.actions = buttonIA;
 
     }
 
@@ -212,15 +219,53 @@ public class PlayerController : MonoBehaviour
     public void YipBoost(InputAction.CallbackContext context)
     {
         yipBtnInput = context.ReadValue<float>();
-        Debug.Log("YipBoost");
+        Debug.Log("YipBoostButton");
 
         if(!b_activeBoost)
         {
             b_activeBoost = true;
             
-            //BoostDelay(gameTimer.Get_CurrentTime());
+            verticalVelocity += boostBaseAdd;
+            StartCoroutine(YipBoostDurationCoroutine());
         }
         
+    }
+
+    public void YipBoostVoice()
+    {
+        Debug.Log("YipBoostVoice");
+
+        if(!b_activeBoost && b_canBoost)
+        {
+            b_activeBoost = true;
+
+            verticalVelocity += boostBaseAdd;
+
+            StartCoroutine(YipBoostDurationCoroutine());
+        }
+    }
+
+    private IEnumerator YipBoostDurationCoroutine()
+    {
+        b_activeBoost = true;
+        b_canBoost = false;
+
+        yield return new WaitForSecondsRealtime(boostDuration);
+
+        verticalVelocity -= boostBaseAdd;
+        StartCoroutine(YipBoostCooldownCoroutine());
+    }
+
+    private IEnumerator YipBoostCooldownCoroutine()
+    {
+        b_activeBoost = false;
+        b_canBoost = false;
+
+        yield return new WaitForSecondsRealtime(boostCooldown);
+
+        b_activeBoost = false;
+        b_canBoost = true;
+        verticalVelocity -= boostBaseAdd;
     }
 
     public void DebugSpaceBar(InputAction.CallbackContext context)
@@ -236,11 +281,21 @@ public class PlayerController : MonoBehaviour
         // design formula starting point 
         // velocity = baseVelocity + baseVerticalMult X t^(baseExponential)
         verticalVelocity = baseVelocity + baseVerticalMult * Mathf.Pow(timerMultiplier, baseExponential);
+
+        if(b_wipeout)
+        {
+            verticalVelocity = 0;
+        }
     }
 
     private void CalcHorizontalVelocity()
     {
         horizontalVelocity = verticalVelocity * baseHorizontalMult;
+
+        if(b_wipeout)
+        {
+            horizontalVelocity = 0;
+        }
     }
 
     // score equation
@@ -261,15 +316,18 @@ public class PlayerController : MonoBehaviour
     private void BoostDelay(float p_time)
     {
         float boostStart = p_time;
-        float boostEnd = boostStart + 1;
+        float boostEnd = boostStart + boostDuration;
+        verticalVelocity += boostBaseAdd;
 
         do
         {
+            b_canBoost = false;
             b_activeBoost = true;
         } while ((gameTimer.Get_CurrentTime() <= boostEnd));
 
         b_activeBoost = false;
-        //alpineSkiVelocity_y = baseVelocity;
+        b_canBoost = true;
+        verticalVelocity -= boostBaseAdd;
     }
 
     // Needs to be called on collision with ice patch
@@ -340,6 +398,16 @@ public class PlayerController : MonoBehaviour
         else if(other.gameObject.CompareTag("Rock"))
         {
             b_avoidableObstacle = true;
+        }
+        else if(other.gameObject.CompareTag("DogBone"))
+        {
+            numRegularBones++;
+            Destroy(other.gameObject);
+        }
+        else if(other.gameObject.CompareTag("DogBoneRare"))
+        {
+            numRareBones++;
+            Destroy(other.gameObject);
         }
     }
 
