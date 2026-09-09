@@ -330,7 +330,6 @@ public class PlayerController : MonoBehaviour
 
         float newScore = playerScore + regBonesScore + rareBonesScore;
         playerScore = newScore;
-        Debug.Log("PlayerScore: " + playerScore);
     }
 
     private void BoostDelay(float p_time)
