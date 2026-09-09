@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 8959712716067836708}
   m_Layer: 7
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: DogBoneRare
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
