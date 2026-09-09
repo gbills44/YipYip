@@ -112,6 +112,8 @@ public class PlayerController : MonoBehaviour
             playerInput.actions = buttonIA;
         }
 
+        playerInput.actions = buttonIA;
+
     }
 
     private void StartMoving()
