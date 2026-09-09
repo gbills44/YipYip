@@ -11,7 +11,7 @@ public class AudioInputAction : MonoBehaviour
     public bool b_audioDetected;
     public AudioLoudnessDetect audioDetector;
     public UnityEngine.UI.Image image;
-    public float loudnessSense = 20.0f;
+    public float loudnessSense = 10.0f;
     public float threshold = 0.1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

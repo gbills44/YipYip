@@ -5257,7 +5257,7 @@ MonoBehaviour:
   b_audioDetected: 0
   audioDetector: {fileID: 1513765818}
   image: {fileID: 1031557104}
-  loudnessSense: 100
+  loudnessSense: 20
   threshold: 0.1
 --- !u!1 &389352769
 GameObject:
