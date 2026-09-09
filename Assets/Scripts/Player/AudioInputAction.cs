@@ -24,7 +24,7 @@ public class AudioInputAction : MonoBehaviour
     void Update()
     {
         float loudness = audioDetector.MicrophoneLoudness() * loudnessSense;
-        Debug.Log(loudness);
+        Debug.Log("AIA Class loudness: " + loudness);
         if(loudness > 0)
         {
             image.color = new Color(0,0,0,1);
