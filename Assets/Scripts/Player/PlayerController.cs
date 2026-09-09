@@ -51,6 +51,11 @@ public class PlayerController : MonoBehaviour
     private float iceBoost = 2.5f;
     private bool b_wipeout = false;
     private bool b_activeBoost = false;
+    private bool b_canBoost = true;
+
+    public float boostBaseAdd = 4.0f;
+    public float boostDuration = 3.0f;
+    public float boostCooldown = 6.0f;
 
     // Alpine Ski Recreation vars below
     
@@ -106,6 +111,8 @@ public class PlayerController : MonoBehaviour
         {
             playerInput.actions = buttonIA;
         }
+
+        playerInput.actions = buttonIA;
 
     }
 
@@ -218,9 +225,21 @@ public class PlayerController : MonoBehaviour
         {
             b_activeBoost = true;
             
-            //BoostDelay(gameTimer.Get_CurrentTime());
+            BoostDelay(gameTimer.Get_CurrentTime());
         }
         
+    }
+
+    public void YipBoostVoice()
+    {
+        Debug.Log("YipBoost");
+
+        if(!b_activeBoost && b_canBoost)
+        {
+            b_activeBoost = true;
+            
+            BoostDelay(gameTimer.Get_CurrentTime());
+        }
     }
 
     public void DebugSpaceBar(InputAction.CallbackContext context)
@@ -236,11 +255,21 @@ public class PlayerController : MonoBehaviour
         // design formula starting point 
         // velocity = baseVelocity + baseVerticalMult X t^(baseExponential)
         verticalVelocity = baseVelocity + baseVerticalMult * Mathf.Pow(timerMultiplier, baseExponential);
+
+        if(b_wipeout)
+        {
+            verticalVelocity = 0;
+        }
     }
 
     private void CalcHorizontalVelocity()
     {
         horizontalVelocity = verticalVelocity * baseHorizontalMult;
+
+        if(b_wipeout)
+        {
+            horizontalVelocity = 0;
+        }
     }
 
     // score equation
@@ -261,15 +290,18 @@ public class PlayerController : MonoBehaviour
     private void BoostDelay(float p_time)
     {
         float boostStart = p_time;
-        float boostEnd = boostStart + 1;
+        float boostEnd = boostStart + boostDuration;
+        verticalVelocity += boostBaseAdd;
 
         do
         {
+            b_canBoost = false;
             b_activeBoost = true;
         } while ((gameTimer.Get_CurrentTime() <= boostEnd));
 
         b_activeBoost = false;
-        //alpineSkiVelocity_y = baseVelocity;
+        b_canBoost = true;
+        verticalVelocity -= boostBaseAdd;
     }
 
     // Needs to be called on collision with ice patch
@@ -340,6 +372,16 @@ public class PlayerController : MonoBehaviour
         else if(other.gameObject.CompareTag("Rock"))
         {
             b_avoidableObstacle = true;
+        }
+        else if(other.gameObject.CompareTag("DogBone"))
+        {
+            numRegularBones++;
+            Destroy(other.gameObject);
+        }
+        else if(other.gameObject.CompareTag("DogBoneRare"))
+        {
+            numRareBones++;
+            Destroy(other.gameObject);
         }
     }
 

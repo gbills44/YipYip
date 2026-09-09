@@ -38,7 +38,8 @@ public class GameTimer : MonoBehaviour
 
         // convert currentTime to text and format for display
         timeDisplay = TimeSpan.FromSeconds(currentTime);
-        timerText.text = timeDisplay.Minutes.ToString() + ":" + timeDisplay.Seconds.ToString() + ":" + timeDisplay.Milliseconds.ToString();
+        int timeSeconds = (timeDisplay.Minutes * 60) + timeDisplay.Seconds;
+        timerText.text = timeSeconds.ToString();
     }
 
     public void StartGameTimer()
