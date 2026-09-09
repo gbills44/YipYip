@@ -1,5 +1,6 @@
 using System.Collections;
 using DK.UI;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D pcRigidBody;
     private PlayerInput playerInput;
     public GameTimer gameTimer;
+    public GameObject yipBoostText;
     
     private bool b_voiceToggle = false;
     
@@ -113,6 +115,8 @@ public class PlayerController : MonoBehaviour
         }
 
         playerInput.actions = buttonIA;
+
+        yipBoostText.SetActive(false);
 
     }
 
@@ -250,6 +254,8 @@ public class PlayerController : MonoBehaviour
         b_activeBoost = true;
         b_canBoost = false;
 
+        ToggleYipBoostText();
+
         yield return new WaitForSecondsRealtime(boostDuration);
 
         verticalVelocity -= boostBaseAdd;
@@ -261,11 +267,25 @@ public class PlayerController : MonoBehaviour
         b_activeBoost = false;
         b_canBoost = false;
 
+        ToggleYipBoostText();
+
         yield return new WaitForSecondsRealtime(boostCooldown);
 
         b_activeBoost = false;
         b_canBoost = true;
         verticalVelocity -= boostBaseAdd;
+    }
+
+    public void ToggleYipBoostText()
+    {
+        if(yipBoostText.activeInHierarchy == false)
+        {
+            yipBoostText.SetActive(true);
+        }
+        else
+        {
+            yipBoostText.SetActive(false);
+        }
     }
 
     public void DebugSpaceBar(InputAction.CallbackContext context)
@@ -310,7 +330,6 @@ public class PlayerController : MonoBehaviour
 
         float newScore = playerScore + regBonesScore + rareBonesScore;
         playerScore = newScore;
-        Debug.Log("PlayerScore: " + playerScore);
     }
 
     private void BoostDelay(float p_time)
