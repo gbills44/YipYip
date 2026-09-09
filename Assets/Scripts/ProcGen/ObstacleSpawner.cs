@@ -66,7 +66,7 @@ public class ObstacleSpawner : MonoBehaviour
         float spawnY = player.transform.position.y + spawnOriginDistance;
         float spawnZ = 0.0f;
         UnityEngine.Vector3 spawnLocation = new UnityEngine.Vector3 (spawnX, spawnY, spawnZ);
-        GameObject spawnedObstacle = PrefabUtility.InstantiatePrefab(obstaclePrefab) as GameObject;
+        GameObject spawnedObstacle = Instantiate(obstaclePrefab) as GameObject;
         spawnedObstacle.transform.position = spawnLocation;
         UnityEngine.Debug.Log("SO-ID: " + spawnedObstacle.GetInstanceID());
         DestroyDelay(ref spawnedObstacle);
