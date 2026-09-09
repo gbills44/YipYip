@@ -8,6 +8,8 @@ public class AudioInputAction : MonoBehaviour
     public bool b_audioDetected;
     public AudioLoudnessDetect audioDetector;
     public UnityEngine.UI.Image image;
+    public float loudnessSense = 100.0f;
+    public float threshold = 0.1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,7 +20,7 @@ public class AudioInputAction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float loudness = audioDetector.MicrophoneLoudness();
+        float loudness = audioDetector.MicrophoneLoudness() * loudnessSense;
         Debug.Log(loudness);
         if(loudness > 0)
         {
@@ -26,6 +28,7 @@ public class AudioInputAction : MonoBehaviour
         }
         else
         {
+            loudness = 0;
             image.color = new Color(255.0f, 0, 0, 1);
         }
     }

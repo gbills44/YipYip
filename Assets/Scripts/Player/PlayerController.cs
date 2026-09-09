@@ -1,4 +1,5 @@
 using System.Collections;
+using DK.UI;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -83,6 +84,30 @@ public class PlayerController : MonoBehaviour
         timerMultiplier = gameTimer.Get_CurrentTime();
         Invoke(nameof(StartMoving), 1f);
         b_wipeout = false;
+
+        switch (PlayerPrefs.GetInt("Voice"))
+        {
+            case 0:
+                b_voiceToggle = true;
+                break;
+            case 1:
+                b_voiceToggle = false;
+                break;
+            default:
+                b_voiceToggle = true;
+                break;
+        }
+
+        if(b_voiceToggle)
+        {
+            playerInput.actions = voiceIA;
+        }
+        else
+        {
+            playerInput.actions = buttonIA;
+        }
+
+        playerInput.actions = buttonIA;
 
     }
 
