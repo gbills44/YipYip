@@ -371,6 +371,16 @@ public class PlayerController : MonoBehaviour
         {
             b_avoidableObstacle = true;
         }
+        else if(other.gameObject.CompareTag("DogBone"))
+        {
+            numRegularBones++;
+            Destroy(other.gameObject);
+        }
+        else if(other.gameObject.CompareTag("DogBoneRare"))
+        {
+            numRareBones++;
+            Destroy(other.gameObject);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
