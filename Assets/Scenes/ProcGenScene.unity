@@ -6637,6 +6637,18 @@ PrefabInstance:
       propertyPath: obstaclePrefab
       value: 
       objectReference: {fileID: 8830504542541824318, guid: 8eb8e554dd7c05c4fbf973a726e640e5, type: 3}
+    - target: {fileID: 3037784555781953165, guid: d2806fa05b1d0e066bb2274469fb82a5, type: 3}
+      propertyPath: spawnTimeDelay
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037784555781953165, guid: d2806fa05b1d0e066bb2274469fb82a5, type: 3}
+      propertyPath: obstacleSpawnDistanceMax
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037784555781953165, guid: d2806fa05b1d0e066bb2274469fb82a5, type: 3}
+      propertyPath: obstacleSpawnDistanceMin
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 4939579538833360588, guid: d2806fa05b1d0e066bb2274469fb82a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1232.8041
@@ -6978,6 +6990,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1654281467}
     - target: {fileID: 2194681033290616118, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
+      propertyPath: SFX_Impact_DogBone
+      value: 
+      objectReference: {fileID: 8300000, guid: 369d577759c72d2449f10246698f89da, type: 3}
+    - target: {fileID: 2194681033290616118, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
       propertyPath: SFX_Player_Wipeout
       value: 
       objectReference: {fileID: 8300000, guid: ea4daa11e944efd43bbf917b5162a2dc, type: 3}
@@ -7025,6 +7041,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4621546523071334171, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040609844178596057, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940104868122757884, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940104868122757884, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940104868122757884, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -7069,7 +7105,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -7317,6 +7353,18 @@ PrefabInstance:
       propertyPath: obstaclePrefab
       value: 
       objectReference: {fileID: 5301209857001852573, guid: 1612f24926cf6ef4fa81b7e29c8feb80, type: 3}
+    - target: {fileID: 3037784555781953165, guid: f5fb07afb87c53b2d9194bdd731c6a32, type: 3}
+      propertyPath: spawnTimeDelay
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037784555781953165, guid: f5fb07afb87c53b2d9194bdd731c6a32, type: 3}
+      propertyPath: obstacleSpawnDistanceMax
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037784555781953165, guid: f5fb07afb87c53b2d9194bdd731c6a32, type: 3}
+      propertyPath: obstacleSpawnDistanceMin
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 4939579538833360588, guid: f5fb07afb87c53b2d9194bdd731c6a32, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1232.8041
@@ -8055,6 +8103,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1675862736}
+    - target: {fileID: 3037784555781953165, guid: 42208ecf00ca0edbe8c18ec1792f0830, type: 3}
+      propertyPath: spawnTimeDelay
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037784555781953165, guid: 42208ecf00ca0edbe8c18ec1792f0830, type: 3}
+      propertyPath: obstacleSpawnDistanceMax
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037784555781953165, guid: 42208ecf00ca0edbe8c18ec1792f0830, type: 3}
+      propertyPath: obstacleSpawnDistanceMin
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 4939579538833360588, guid: 42208ecf00ca0edbe8c18ec1792f0830, type: 3}
       propertyPath: m_LocalPosition.x
       value: 918.02686

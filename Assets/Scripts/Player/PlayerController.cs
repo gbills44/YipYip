@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip SFX_Impact_Tree;
     public AudioClip SFX_Impact_Rock;
+    public AudioClip SFX_Impact_DogBone;
     public AudioClip SFX_Player_Wipeout;
     public AudioClip SFX_Player_Jump;
     public AudioClip SFX_Player_Slide;
@@ -190,7 +191,10 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            audioSource.PlayOneShot(SFX_Player_Slide, 0.2f); //Play Slide Audio
+            if (b_wipeout == false)
+            {
+                audioSource.PlayOneShot(SFX_Player_Slide, 0.2f); //Play Slide Audio
+            }
         }
         moveInput = context.ReadValue<Vector2>();
     }
@@ -199,7 +203,10 @@ public class PlayerController : MonoBehaviour
     {
         if(context.performed && b_canJump)
         {
-            audioSource.PlayOneShot(SFX_Player_Jump); //Play Jump Audio
+            if(b_wipeout == false)
+            {
+                audioSource.PlayOneShot(SFX_Player_Jump); //Play Jump Audio
+            }
             StartCoroutine(JumpCoroutine());   
         }
         
@@ -395,12 +402,12 @@ public class PlayerController : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Rock"))
         {
-            audioSource.PlayOneShot(SFX_Impact_Rock);
+            audioSource.PlayOneShot(SFX_Impact_Rock);//Play impact rock audio
             Wipeout();
         }
         else if(other.gameObject.CompareTag("Tree"))
         {
-            audioSource.PlayOneShot(SFX_Impact_Tree);
+            audioSource.PlayOneShot(SFX_Impact_Tree);//Play Impact tree audio
             Wipeout();
         }
     }
@@ -409,7 +416,8 @@ public class PlayerController : MonoBehaviour
     // OnCollisionTriggerEnter2D
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("IceCollider"))
+
+        if (other.gameObject.CompareTag("IceCollider"))
         {
             Debug.Log("Ice Collision");
             IceSlide();
@@ -421,6 +429,7 @@ public class PlayerController : MonoBehaviour
         else if(other.gameObject.CompareTag("DogBone"))
         {
             numRegularBones++;
+            audioSource.PlayOneShot(SFX_Impact_DogBone);//Play impact DogBone audio
             Destroy(other.gameObject);
         }
         else if(other.gameObject.CompareTag("DogBoneRare"))
