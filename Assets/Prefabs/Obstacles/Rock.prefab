@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 2015503810336277508}
   - component: {fileID: 1408216064866062780}
   - component: {fileID: 6560516569607889220}
+  - component: {fileID: 5006179662813720858}
   m_Layer: 6
   m_Name: Rock
   m_TagString: RockBaseObject
@@ -308,3 +309,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49855c860b24802efa65f42ec453e368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleDespawner
+--- !u!114 &5006179662813720858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8745361452410429193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d61c2cfa18b7d2df84097fc3e5c3acc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  spriteOne: {fileID: -8303345598369345029, guid: 4271a3e99dbdc7b4caa994220c0fa1fa, type: 3}
+  spriteTwo: {fileID: -4893674610363630385, guid: 7044411410c411e489ed9a4b935a04b3, type: 3}
+  spriteThree: {fileID: -900260518618237369, guid: 61c35b1634d4ced4fa17b7d19ab738a9, type: 3}
