@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 3050296758644885145}
   - component: {fileID: 3041874944392775457}
   - component: {fileID: 9017648330532674125}
-  - component: {fileID: 1831551439648650478}
   m_Layer: 7
-  m_Name: Tree
+  m_Name: Tree_Three
   m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,21 +92,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49855c860b24802efa65f42ec453e368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleDespawner
---- !u!114 &1831551439648650478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773169311502000533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d61c2cfa18b7d2df84097fc3e5c3acc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SwapSprite
-  spriteOne: {fileID: -1003418203834608185, guid: dcef3e1a91304f642a4a38d7fc3309fb, type: 3}
-  spriteTwo: {fileID: -5969480567788392214, guid: a695ccfdd51f47c4d9b31101cfa0c8ba, type: 3}
-  spriteThree: {fileID: -6484070729918542422, guid: d534b0e1b2aae9b44bb7ae3e5dbadfed, type: 3}
 --- !u!1 &7999035396665312947
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +175,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1003418203834608185, guid: dcef3e1a91304f642a4a38d7fc3309fb, type: 3}
+  m_Sprite: {fileID: -6484070729918542422, guid: d534b0e1b2aae9b44bb7ae3e5dbadfed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -262,15 +246,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0027686656, y: -0.0249179}
+  m_Offset: {x: -0.0027686656, y: 0.0114482045}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 2.47}
+    oldSize: {x: 1.37, y: 2.07}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.67329866, y: 2.423089}
+  m_Size: {x: 0.67329866, y: 2.0594287}
   m_EdgeRadius: 0

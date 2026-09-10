@@ -10,14 +10,13 @@ public class AudioInputAction : MonoBehaviour
 
     public bool b_audioDetected;
     public AudioLoudnessDetect audioDetector;
-    public UnityEngine.UI.Image image;
-    public float loudnessSense = 10.0f;
-    public float threshold = 0.1f;
+    public float loudnessSense = 20.0f;
+    public float threshold = 0.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        image = GetComponent<UnityEngine.UI.Image>();
+        
     }
 
     // Update is called once per frame
@@ -29,16 +28,12 @@ public class AudioInputAction : MonoBehaviour
         {
             Debug.Log("AIA Class ifelse loudness: " + loudness);
 
-            //image.color = new Color(0,0,0,1);
             player.GetComponent<PlayerController>().YipBoostVoice();
 
-            //image.gameObject.SetActive(true);
         }
         else
         {
             loudness = 0;
-            //image.color = new Color(255.0f, 0, 0, 1);
-            //image.gameObject.SetActive(false);
         }
     }
 }
