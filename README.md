@@ -9,3 +9,9 @@
 # Build v0.9.5
 
 # Tweaked voice input values to try to get more consitency
+
+
+
+# Build v0.9.6
+
+# Hengxin Audio and bug fixes
