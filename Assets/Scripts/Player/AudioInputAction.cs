@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class AudioInputAction : MonoBehaviour
 {
+    /*
     //public AudioSource src;
 
     [SerializeField] GameObject player;
@@ -36,4 +37,5 @@ public class AudioInputAction : MonoBehaviour
             loudness = 0;
         }
     }
+    */
 }

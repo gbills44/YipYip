@@ -290,63 +290,6 @@ Transform:
   - {fileID: 2066656038}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &38135074
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1675862744}
-    m_Modifications:
-    - target: {fileID: 5920201946753570179, guid: ef91053bc5d77b64d89af1db31c7bc83, type: 3}
-      propertyPath: m_Name
-      value: MicInput
-      objectReference: {fileID: 0}
-    - target: {fileID: 7076554480001254720, guid: ef91053bc5d77b64d89af1db31c7bc83, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1232.8041
-      objectReference: {fileID: 0}
-    - target: {fileID: 7076554480001254720, guid: ef91053bc5d77b64d89af1db31c7bc83, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 915.13745
-      objectReference: {fileID: 0}
-    - target: {fileID: 7076554480001254720, guid: ef91053bc5d77b64d89af1db31c7bc83, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7076554480001254720, guid: ef91053bc5d77b64d89af1db31c7bc83, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7076554480001254720, guid: ef91053bc5d77b64d89af1db31c7bc83, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7076554480001254720, guid: ef91053bc5d77b64d89af1db31c7bc83, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7076554480001254720, guid: ef91053bc5d77b64d89af1db31c7bc83, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7076554480001254720, guid: ef91053bc5d77b64d89af1db31c7bc83, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7076554480001254720, guid: ef91053bc5d77b64d89af1db31c7bc83, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7076554480001254720, guid: ef91053bc5d77b64d89af1db31c7bc83, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ef91053bc5d77b64d89af1db31c7bc83, type: 3}
 --- !u!1 &256610527
 GameObject:
   m_ObjectHideFlags: 0
@@ -5208,56 +5151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8987c0731057f0d488a604832bf9cc47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
---- !u!1 &342071703
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 342071704}
-  - component: {fileID: 342071705}
-  m_Layer: 0
-  m_Name: AudioInput
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &342071704
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342071703}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 608, y: -148, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1196169912}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &342071705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342071703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b2543d257533844e9816af0d3318191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioInputAction
-  player: {fileID: 1675862736}
-  b_audioDetected: 0
-  audioDetector: {fileID: 1513765818}
-  image: {fileID: 0}
-  loudnessSense: 20
-  threshold: 0.5
 --- !u!1 &389352769
 GameObject:
   m_ObjectHideFlags: 0
@@ -6604,22 +6497,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2806fa05b1d0e066bb2274469fb82a5, type: 3}
---- !u!4 &1513765817 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7076554480001254720, guid: ef91053bc5d77b64d89af1db31c7bc83, type: 3}
-  m_PrefabInstance: {fileID: 38135074}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1513765818 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8850209235349974588, guid: ef91053bc5d77b64d89af1db31c7bc83, type: 3}
-  m_PrefabInstance: {fileID: 38135074}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e53544f3741fef1439f0a81737919359, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1 &1551671044
 GameObject:
   m_ObjectHideFlags: 0
@@ -6969,10 +6846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 3935591396674174871, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1513765817}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 543880281096147862, guid: 8e2dc2dc682991743b788ad9540aa81b, type: 3}
       insertIndex: -1
@@ -8124,9 +7998,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8111509085426382617, guid: 6c672e8dd58abadc695cd90282621b28, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2126426651}
-    - targetCorrespondingSourceObject: {fileID: 8111509085426382617, guid: 6c672e8dd58abadc695cd90282621b28, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 342071704}
     - targetCorrespondingSourceObject: {fileID: 8111509085426382617, guid: 6c672e8dd58abadc695cd90282621b28, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1551671045}

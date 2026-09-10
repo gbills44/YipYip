@@ -4,6 +4,7 @@ using UnityEngine;
 public class AudioLoudnessDetect : MonoBehaviour
 {
 
+    /*
     public int sampleWindow = 64;
     private AudioClip micClip;
 
@@ -58,4 +59,5 @@ public class AudioLoudnessDetect : MonoBehaviour
     {
         return GetLoudnessFromAudioClip(Microphone.GetPosition(Microphone.devices[1]), micClip);
     }
+    */
 }
