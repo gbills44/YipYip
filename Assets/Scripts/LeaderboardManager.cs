@@ -80,7 +80,7 @@ public class LeaderboardManager : MonoBehaviour
         switch (rank)
         {
             default: rankString = rank + "TH"; break;
-            case 1: rankString = "1ST"; break;
+            case 1: rankString = "TOP DOG"; break;
             case 2: rankString = "2ND"; break;
             case 3: rankString = "3RD"; break;
         }

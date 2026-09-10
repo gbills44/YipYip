@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace DK.UI
 {
@@ -8,18 +9,39 @@ namespace DK.UI
     {
         [Header("UI References")]
         [SerializeField] private GameObject menuCanvas;
+        [SerializeField] private GameObject infoPanel;
+
+        [Header("Title Animation")]
+        [SerializeField] private Animator titleAnimator;
+        [SerializeField] private string introAnimationName = "TitleIntro";
+
+        [Header("Fade Transition")]
+        [SerializeField] private Image fadeOverlay;
+        [SerializeField] private float fadeDuration = 2f;
 
         [Header("Timing")]
         [SerializeField] private float delayInSeconds = 2.5f;
 
         [Header("Audio")]
         public AudioSource audioSource;
-        public AudioClip buttonClickSFX;
+        public AudioClip playButtonSFX;
+        public AudioClip infoButtonSFX;
+        public AudioClip genericButtonSFX;
 
         private static bool hasSeenIntro = false;
 
         private void Start()
         {
+            if (infoPanel != null) infoPanel.SetActive(false);
+
+            if (fadeOverlay != null)
+            {
+                Color c = fadeOverlay.color;
+                c.a = 0f;
+                fadeOverlay.color = c;
+                fadeOverlay.gameObject.SetActive(false);
+            }
+
             if (!hasSeenIntro)
             {
                 if (menuCanvas != null)
@@ -31,6 +53,11 @@ namespace DK.UI
             }
             else
             {
+                if (titleAnimator != null)
+                {
+                    titleAnimator.Play(introAnimationName, 0, 1f);
+                }
+
                 if (menuCanvas != null)
                 {
                     menuCanvas.SetActive(true);
@@ -41,33 +68,63 @@ namespace DK.UI
         private IEnumerator ShowMenuAfterDelay()
         {
             yield return new WaitForSeconds(delayInSeconds);
+            if (menuCanvas != null) menuCanvas.SetActive(true);
+        }
 
-            if (menuCanvas != null)
+        public void ToggleInfoPanel()
+        {
+            if (infoPanel != null)
             {
-                menuCanvas.SetActive(true);
+                infoPanel.SetActive(!infoPanel.activeSelf);
+            }
+
+            if (audioSource != null && infoButtonSFX != null)
+            {
+                audioSource.PlayOneShot(infoButtonSFX);
             }
         }
 
-        public void PlayButtonSound()
+        public void PlayGenericSound()
         {
-            if (audioSource != null && buttonClickSFX != null)
+            if (audioSource != null && genericButtonSFX != null)
             {
-                audioSource.PlayOneShot(buttonClickSFX);
+                audioSource.PlayOneShot(genericButtonSFX);
             }
         }
 
         public void PlayGame()
         {
-            PlayButtonSound();
-            StartCoroutine(LoadSceneWithDelay());
+            if (audioSource != null && playButtonSFX != null)
+            {
+                audioSource.PlayOneShot(playButtonSFX);
+            }
+
+            StartCoroutine(FadeAndLoadScene(1));
         }
 
-        private IEnumerator LoadSceneWithDelay()
+        private IEnumerator FadeAndLoadScene(int sceneIndex)
         {
-            float waitTime = buttonClickSFX != null ? buttonClickSFX.length : 0.2f;
-            yield return new WaitForSeconds(waitTime);
+            if (fadeOverlay != null)
+            {
+                fadeOverlay.gameObject.SetActive(true);
+                Color fadeColor = fadeOverlay.color;
+                float elapsedTime = 0f;
 
-            SceneManager.LoadSceneAsync(1);
+                while (elapsedTime < fadeDuration)
+                {
+                    elapsedTime += Time.deltaTime;
+                    fadeColor.a = Mathf.Clamp01(elapsedTime / fadeDuration);
+                    fadeOverlay.color = fadeColor;
+
+                    yield return null;
+                }
+            }
+            else
+            {
+                yield return new WaitForSeconds(fadeDuration);
+            }
+
+            SceneManager.LoadSceneAsync(sceneIndex);
         }
     }
 }
