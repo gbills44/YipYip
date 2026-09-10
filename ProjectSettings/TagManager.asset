@@ -51,9 +51,6 @@ TagManager:
   - name: Background
     uniqueID: 740982879
     locked: 0
-  - name: Player
-    uniqueID: 825236173
-    locked: 0
   - name: MovingObstacles
     uniqueID: 865454259
     locked: 0
@@ -68,6 +65,9 @@ TagManager:
     locked: 0
   - name: Borders
     uniqueID: 1653205133
+    locked: 0
+  - name: Player
+    uniqueID: 825236173
     locked: 0
   - name: UI
     uniqueID: 880605001
