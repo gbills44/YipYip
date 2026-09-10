@@ -1,4 +1,4 @@
-using System.Collections; // Required for Coroutines
+using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -14,19 +14,23 @@ public class GameOverManager : MonoBehaviour
     [Header("Standard Game Over UI")]
     public GameObject standardPanel;
     public Button restartButton;
+    public Button mainMenuButton;
 
     [Header("Background")]
-    public GameObject blackBackground; // Slot for your new black screen
+    public GameObject blackBackground;
 
     [Header("References")]
     public PlayerController playerController;
     public string leaderboardSceneName = "Leaderboard";
+    public int mainMenuSceneIndex = 0; 
 
     private void Start()
     {
         nameInputField.onValueChanged.AddListener(text => nameInputField.text = text.ToUpper());
         submitButton.onClick.AddListener(SubmitScore);
         restartButton.onClick.AddListener(RestartGame);
+
+        mainMenuButton.onClick.AddListener(LoadMainMenu);
 
         highscorePanel.SetActive(false);
         standardPanel.SetActive(false);
@@ -69,5 +73,10 @@ public class GameOverManager : MonoBehaviour
     private void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void LoadMainMenu()
+    {
+        SceneManager.LoadScene(mainMenuSceneIndex);
     }
 }
