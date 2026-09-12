@@ -1,5 +1,8 @@
 # YipYip-Test
 
+# Husky Run Build v1.0.0T
+# Build for tablet/android release
+
 # Build v0.9.4
 
 # Jump and Boost coroutines
